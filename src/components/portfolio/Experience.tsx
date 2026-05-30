@@ -26,7 +26,12 @@ export function Experience() {
           className="xp-road"
           initial="rest"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          /* Fire only once the road has climbed well into view (negative bottom
+             margin shrinks the trigger zone from the bottom). The section gets a
+             cinematic scroll-zoom blur/fade as it enters (FolioRuntime initZoom);
+             triggering early made the left→right sweep play *under* that blur and
+             finish before the section settled — so it was never seen. */
+          viewport={{ once: true, amount: 0.3, margin: "0px 0px -40% 0px" }}
         >
           {/* base track + animated progress fill */}
           <div className="xp-road-track" aria-hidden="true" />
