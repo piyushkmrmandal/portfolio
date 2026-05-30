@@ -1,0 +1,196 @@
+/* ============ PROJECTS — open-source carousel ============ */
+/* Light-system adaptation of the Gallery4 horizontal carousel, with a live
+   ArchitectureFlow panel inside each card instead of a stock image. */
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(32px, 5vh, 56px);
+}
+
+.headText {
+  text-align: left;
+  max-width: 640px;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.navBtn {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  color: var(--ink);
+  box-shadow: var(--sh-sm);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
+    background 0.25s, color 0.25s, opacity 0.25s;
+}
+.navBtn:not(:disabled):hover {
+  transform: translateY(-2px);
+  background: var(--ink);
+  color: #fff;
+  box-shadow: var(--sh-md);
+}
+.navBtn:disabled {
+  opacity: 0.4;
+  box-shadow: none;
+}
+
+/* card */
+.track {
+  margin-left: -28px;
+}
+.item {
+  flex: 0 0 auto;
+  width: min(88vw, 360px);
+  padding-left: 28px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-sm);
+  overflow: hidden;
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease),
+    border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sh-lg);
+  border-color: var(--lav-2);
+}
+
+/* navy panel that hosts the ArchitectureFlow (icons read on dark) */
+.visual {
+  position: relative;
+  height: 196px;
+  margin: 12px 12px 0;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--navy), var(--navy-2));
+}
+.visualLabel {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 22px 24px;
+}
+.title {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+}
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 16px;
+}
+.pills span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap 0.3s var(--ease), color 0.25s;
+}
+.link:hover {
+  gap: 10px;
+  color: var(--blue-700);
+}
+.link svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: clamp(32px, 5vh, 48px);
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background: var(--line-2);
+  cursor: pointer;
+  transition: width 0.4s var(--ease), background 0.3s var(--ease);
+}
+.dotActive {
+  width: 26px;
+  background: var(--accent);
+}
+
+@media (max-width: 680px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .headText {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .navBtn,
+  .dot,
+  .link {
+    transition: none;
+  }
+}
