@@ -25,42 +25,28 @@ type Project = {
    real repositories, each card visualises that project's architecture. */
 const PROJECTS: Project[] = [
   {
-    title: "algo-verse",
+    title: "AlgoVerse",
     desc: "An AI-powered DSA & system-design platform — a Monaco IDE behind an Nginx gateway runs each submission in a Docker/gVisor sandbox, with an Ollama AI mentor and Kafka-driven analytics.",
     repo: "https://github.com/piyushkmrmandal/algo-verse",
     pills: ["Java", "Spring Boot", "React", "Kafka", "Ollama"],
     stages: ["IDE", "Gateway", "Sandbox", "Mentor", "Kafka"],
   },
   {
-    title: "airbnb-project",
+    title: "Airbnb Clone",
     desc: "A Spring Boot + React Airbnb replica that uses AI to scaffold applications on demand — a React UI calls a REST API where an AI builder generates listings persisted to the database.",
     repo: "https://github.com/piyushkmrmandal/airbnb-project",
     pills: ["Java", "Spring Boot", "React", "AI"],
     stages: ["UI", "API", "AI Builder", "Database", "Listings"],
   },
   {
-    title: "claude-next-gen-starter",
-    desc: "An AI-native, cinematic Next.js starter for Claude Code — prompts scaffold shadcn components into the App Router, styled with Framer Motion and shipped to Vercel.",
-    repo: "https://github.com/piyushkmrmandal/claude-next-gen-starter",
-    pills: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    stages: ["Prompt", "Components", "App", "Motion", "Deploy"],
-  },
-  {
-    title: "spring-microservices",
-    desc: "A Spring Cloud reference build — clients hit a Zuul gateway that resolves services through the Eureka naming server, with Sleuth + Zipkin distributed tracing across the fleet.",
-    repo: "https://github.com/piyushkmrmandal/spring-microservices",
-    pills: ["Java", "Spring Cloud", "Eureka", "Zuul", "Zipkin"],
-    stages: ["Client", "Gateway", "Discovery", "Service", "Tracing"],
-  },
-  {
-    title: "springmicroservice-advance",
-    desc: "The MSSC brewery microservices — Spring Boot services exchange JMS messages, are packaged with Docker and wired with Spring Cloud functionality for cloud deployment.",
+    title: "MSSC Brewery Microservices",
+    desc: "The MSSC Brewery microservices are Spring Boot services that use JMS messaging, Docker, and Spring Cloud to simulate an automated beer ordering system, handling ordering, payment, confirmation, and delivery workflows.",
     repo: "https://github.com/piyushkmrmandal/springmicroservice-advance",
     pills: ["Spring Boot", "JMS", "Docker", "Spring Cloud"],
     stages: ["API", "Service", "Messaging", "Docker", "Cloud"],
   },
   {
-    title: "currency-exchange-microservice",
+    title: "Currency Exchange Microservice",
     desc: "A Spring Cloud currency stack — a Zuul gateway fronts a currency-exchange service that a conversion service calls over Feign, guarded by Hystrix fault tolerance.",
     repo: "https://github.com/piyushkmrmandal/currency-exchange-microservice",
     pills: ["Spring Boot", "Feign", "Eureka", "Hystrix"],
