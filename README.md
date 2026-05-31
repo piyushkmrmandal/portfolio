@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Piyush Kumar Mandal — Portfolio
 
-## Getting Started
+A cinematic, scroll-driven personal portfolio built with **Next.js 15**, **Framer Motion**, and **TypeScript**. Designed to feel handcrafted — not templated — with weighted motion, intentional typography, and layered depth.
 
-First, run the development server:
+![Hero Section](./public/hero-screenshot.png)
+
+---
+
+## What this is
+
+This is the source code for [piyushkmrmandal.com](https://github.com/piyushkmrmandal/portfolio) — the portfolio of Piyush Kumar Mandal, Lead Backend Engineer with 8+ years across Infosys, Alten Calasoft, Cognizant and EXL Services, delivering enterprise-scale systems for clients including Barclays, Google, American Express, and Anglo Gulf Trade Bank.
+
+The site tells a career story through:
+
+- **Cinematic intro reveal** — full-screen name animation with curtain wipe on every load
+- **Hero** — asymmetric layout with headline, photo, and brand logos (Google, AmEx, The Hartford, AGTB)
+- **Work** — sticky-pinned project cards with architecture flow diagrams, scroll-stacked
+- **Skills** — categorised technology grid across languages, frameworks, cloud, APIs, data and DevOps
+- **Experience** — horizontal roadmap timeline, oldest → current, scroll-triggered left-to-right sweep
+- **Awards** — scroll-driven fan-out reveal: three cards stack behind the centre card then spread to a row
+- **Testimonials** — peer and leadership quotes with a side stats panel
+- **About** — professional bio with layered card layout
+- **Contact** — direct email / LinkedIn / GitHub / WhatsApp links
+
+---
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 15 (App Router, static export) |
+| Language | TypeScript |
+| Animation | Framer Motion |
+| Fonts | Plus Jakarta Sans (Google Fonts) |
+| Styling | CSS Modules + global portfolio.css |
+| Icons | Custom inline SVG set |
+| Components | shadcn/ui, Magic UI (ShineBorder) |
+
+---
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build
+npm run start   # serve production build locally
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── layout.tsx          # metadata, fonts
+│   ├── page.tsx            # root page, section order
+│   ├── portfolio.css       # all component styles
+│   └── icon.svg            # favicon (P monogram)
+└── components/
+    └── portfolio/
+        ├── data.ts         # all content (XP, skills, work, testimonials, awards)
+        ├── Intro.tsx       # cinematic intro overlay
+        ├── Hero.tsx        # landing hero
+        ├── Work.tsx        # project cards (sticky scroll)
+        ├── Skills.tsx      # skills grid
+        ├── Experience.tsx  # roadmap timeline
+        ├── Awards.tsx      # fan-out award cards
+        ├── Testimonials.tsx
+        ├── About.tsx
+        ├── Footer.tsx
+        └── Nav.tsx
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Personal portfolio — all content (name, photo, work history) belongs to Piyush Kumar Mandal. Code structure is open for reference.
