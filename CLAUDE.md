@@ -94,3 +94,11 @@ Reference quality:
 - Vercel
 - Raycast
 - Huly
+
+# Git
+- Any git commit should be in the exact form "COMMIT_ID:<a 4 digit sequence number>:<a vlaid message about the changes being pushe>"
+- Any chnages should be done on develop branch only and pushed
+- Before pushing any changes make sure all builds are running fine and working
+
+# Graphify
+- Always run graphify releavnt command post all changes valdation
