@@ -66,6 +66,7 @@ export const XP: Experience[] = [
   { when: "AUG 2025 — PRESENT", co: "EXL Services UK", role: "Lead Assistant Manager", via: "Client · Barclays USA — GFED, USCB Cards" },
   { when: "JUN 2022 — JUN 2024", co: "EXL Services", role: "Senior Software Engineer", via: "Client · Barclays USA — OpenShift & CI/CD" },
   { when: "JUL 2021 — MAY 2022", co: "Cognizant", role: "Associate Projects", via: "Google Trust & Safety Devshop" },
+  { when: "APR 2021 — JUL 2021", co: "Alten Calasoft Labs", role: "Java Developer", via: "Client · Anglo Gulf Trade Bank — Corporate Onboarding" },
   { when: "OCT 2020 — APR 2021", co: "Infosys", role: "Senior Systems Engineer", via: "Client · American Express — TPDG" },
   { when: "NOV 2017 — SEP 2020", co: "Infosys", role: "Systems Engineer", via: "The Hartford — Ability Advantage" },
 ];

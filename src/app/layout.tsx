@@ -10,7 +10,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Piyush Kumar Mandal — Cloud-Native Engineering Leader",
+  title: "Piyush Kumar Mandal",
   description:
     "Portfolio of Piyush Kumar Mandal — resilient cloud-native platforms, distributed systems and engineering leadership.",
 };

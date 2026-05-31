@@ -15,10 +15,10 @@ export function Experience() {
       <div className="wrap">
         <div className="section-head reveal xp-head">
           <div className="eyebrow center">Career</div>
-          <h2 className="section-title">Eight years, four global enterprises</h2>
+          <h2 className="section-title">Eight years, five global enterprises</h2>
           <p>
             A path from systems engineer to engineering lead across Infosys,
-            Cognizant and EXL.
+            Alten Calasoft, Cognizant and EXL.
           </p>
         </div>
 

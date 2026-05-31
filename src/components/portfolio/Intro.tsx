@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import styles from "./Intro.module.css";
 
@@ -18,30 +18,30 @@ const wordVariants: Variants = {
 };
 
 export function Intro() {
-  // Start hidden; decide on mount (client-only) whether to play.
-  const [visible, setVisible] = useState(false);
+  // Start visible immediately so there is no flash of the underlying page.
+  const [visible, setVisible] = useState(true);
+
+  // useLayoutEffect fires before paint — reduced-motion users never see the overlay.
+  useLayoutEffect(() => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      setVisible(false);
+      return;
+    }
+    document.body.style.overflow = "hidden";
+  }, []);
 
   useEffect(() => {
-    const prefersReduced =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    // Play the cinematic intro on every full page load (the reduced-motion
-    // preference still skips it for accessibility).
-    if (prefersReduced) {
-      return; // never lock scroll, never show
-    }
-
-    setVisible(true);
-    document.body.style.overflow = "hidden";
+    if (!visible) return;
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
 
     const timer = window.setTimeout(() => setVisible(false), 3000);
-
     return () => {
       window.clearTimeout(timer);
       document.body.style.overflow = "";
     };
-  }, []);
+  }, [visible]);
 
   return (
     <AnimatePresence>
@@ -71,7 +71,7 @@ export function Intro() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
             >
-              Cloud-Native Engineering
+              LEAD BACKEND ENGINEER
             </motion.div>
 
             <h1 className={styles.name} aria-label="Piyush Kumar Mandal">
@@ -106,7 +106,7 @@ export function Intro() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 1.15, ease: EASE }}
             >
-              Engineering resilient platforms
+              Building fault-tolerant systems, intelligent APIs, and cloud-native platforms at enterprise scale
             </motion.p>
           </div>
 
