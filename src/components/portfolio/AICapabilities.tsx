@@ -101,13 +101,16 @@ const AI_TOOLS = [
   },
   {
     name: "Openclaw",
-    bg: "#1a1a2e",
+    bg: "#c0392b",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <path d="M24 8c-3 0-6 2-7 5.5C15 17 16 20 18 22l-6 14h5l4-9 4 9h5L24 22c2-2 3-5 1-8.5C24.2 10 24 8 24 8Z" fill="white" opacity="0.9"/>
-        <path d="M17 14c-2 1-3.5 3-3 5.5L8 30h4l4-8" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.6"/>
-        <path d="M31 14c2 1 3.5 3 3 5.5L40 30h-4l-4-8" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.6"/>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/openclaw.png"
+        alt="Openclaw"
+        width={42}
+        height={42}
+        style={{ objectFit: "contain" }}
+      />
     ),
   },
   {
