@@ -2,15 +2,15 @@
 .panelRow {
   display: flex;
   flex-direction: row;
-  gap: 12px;
-  height: 340px;
+  gap: 10px;
+  height: 400px;
   align-items: stretch;
 }
 
 /* ── Individual Panel ── */
 .panel {
   flex: 1;
-  min-width: 72px;
+  min-width: 68px;
   position: relative;
   border-radius: 22px;
   border: 1px solid var(--line);
@@ -21,7 +21,7 @@
   flex-direction: row;
   align-items: stretch;
   transition:
-    flex 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    flex 0.55s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.4s ease,
     background 0.5s ease,
     box-shadow 0.4s ease;
@@ -39,7 +39,7 @@
 
 /* Active panel expands */
 .panelActive {
-  flex: 7;
+  flex: 8;
   border-color: var(--panel-border, var(--accent));
   background: linear-gradient(
     135deg,
@@ -50,21 +50,20 @@
   cursor: default;
 }
 
-/* ── Collapsed strip (icon + rotated label) ── */
-.panelCollapsed {
+/* ── Left strip (icon + rotated label) — always visible ── */
+.panelStrip {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  width: 72px;
-  min-width: 72px;
+  width: 68px;
+  min-width: 68px;
   padding: 24px 0;
   flex-shrink: 0;
   z-index: 1;
 }
 
-/* Icon circle */
 .panelIconWrap {
   display: flex;
   align-items: center;
@@ -81,9 +80,8 @@
   background: color-mix(in oklch, var(--panel-accent, var(--accent)) 12%, white);
 }
 
-/* Rotated label */
 .panelLabelRotated {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -95,19 +93,19 @@
   line-height: 1;
 }
 
-/* ── Expanded Content ── */
+/* ── Expanded area (text + visual) ── */
 .panelContent {
   flex: 1;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
   align-items: stretch;
-  /* clips during collapse */
   opacity: 0;
-  transform: translateX(18px);
+  transform: translateX(16px);
   pointer-events: none;
   transition:
-    opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.05s,
-    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.08s,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.08s;
 }
 
 .panelActive .panelContent {
@@ -116,28 +114,16 @@
   pointer-events: auto;
 }
 
-.panelContentInner {
+/* ── Text column ── */
+.panelText {
   display: flex;
   flex-direction: column;
-  padding: 32px 32px 32px 4px;
-  width: 100%;
-  min-width: 0;
-}
-
-/* Large icon in expanded state */
-.panelIconLarge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: color-mix(in oklch, currentColor 10%, white);
-  margin-bottom: 20px;
+  padding: 32px 24px 32px 4px;
+  width: 280px;
+  min-width: 220px;
   flex-shrink: 0;
 }
 
-/* Meta: eyebrow + title */
 .panelMeta {
   margin-bottom: 14px;
 }
@@ -160,15 +146,14 @@
 }
 
 .panelDesc {
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.7;
   color: var(--muted);
   flex: 1;
   margin-bottom: 24px;
-  max-width: 44ch;
+  max-width: 38ch;
 }
 
-/* Footer row: price chip + CTA */
 .panelFooter {
   display: flex;
   align-items: center;
@@ -190,14 +175,13 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   color: #fff;
   border-radius: 999px;
   padding: 8px 8px 8px 18px;
   text-decoration: none;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
 
 .panelCta:hover {
@@ -219,29 +203,209 @@
   transform: rotate(-45deg);
 }
 
+/* ── Visual column ── */
+.panelVisual {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px 20px 0;
+  min-width: 0;
+}
+
+/* ── Visual canvas (shared wrapper) ── */
+.visualCanvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+/* ── Browser mockup ── */
+.browser {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.browserChrome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: #f4f4f6;
+  border-bottom: 1px solid #e8e8ec;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+}
+
+.urlBar {
+  flex: 1;
+  background: white;
+  border: 1px solid #e4e4e8;
+  border-radius: 4px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.browserBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.bNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  flex-shrink: 0;
+}
+
+.bHero {
+  background: #f7f8ff;
+  border-radius: 7px;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.bCards {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+  min-height: 0;
+}
+
+.bCard {
+  flex: 1;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #eef0f8;
+  padding: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* ── Mobile preview (floats top-right) ── */
+.mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  background: white;
+  border-radius: 10px;
+  border: 1.5px solid;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* ── Dashboard ── */
+.dashFrame {
+  flex: 1;
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  min-height: 0;
+}
+
+.dashSidebar {
+  width: 44px;
+  background: #f9f9fb;
+  border-right: 1px solid;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.dashMain {
+  flex: 1;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ── Floating notification chip ── */
+.floatNotif {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+/* ── SVG flow diagram ── */
+.flowSvg {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Code chip ── */
+.codeChip {
+  background: #0f172a;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: "SF Mono", "Fira Code", monospace;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* ── Responsive ── */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .panelRow {
-    flex-direction: column;
     height: auto;
+    flex-direction: column;
   }
 
   .panel {
     flex: none !important;
     min-width: unset;
     width: 100%;
-    min-height: 72px;
+    min-height: 68px;
   }
 
   .panelActive {
-    min-height: 300px;
+    min-height: 380px;
   }
 
-  .panelCollapsed {
+  .panelStrip {
     flex-direction: row;
     width: 100%;
     min-width: unset;
-    height: 72px;
+    height: 68px;
     padding: 0 24px;
     gap: 14px;
   }
@@ -252,19 +416,23 @@
   }
 
   .panelContent {
-    display: none;
+    flex-direction: column;
     transform: translateY(12px);
   }
 
   .panelActive .panelContent {
-    display: flex;
+    transform: translateY(0);
   }
 
-  .panelContentInner {
-    padding: 0 24px 28px;
+  .panelText {
+    width: 100%;
+    min-width: unset;
+    padding: 0 24px 16px;
   }
 
-  .panelIconLarge {
-    display: none;
+  .panelVisual {
+    padding: 0 24px 24px;
+    height: 180px;
+    flex: none;
   }
 }
