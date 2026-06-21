@@ -1,0 +1,48 @@
+.availBlock {
+  text-align: left;
+  max-width: 65ch;
+  margin-bottom: 80px;
+}
+
+.body {
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.72;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listItem {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  font-weight: 500;
+}
+
+.dash {
+  color: var(--accent);
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 14px;
+  user-select: none;
+}
+
+.closing {
+  margin-top: 24px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--muted-2);
+  font-style: italic;
+}

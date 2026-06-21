@@ -1,7 +1,36 @@
+import styles from "./Contact.module.css";
+
 export function Contact() {
   return (
     <section className="section" id="contact" data-screen-label="Contact">
       <div className="wrap">
+        <div className={`${styles.availBlock} reveal`}>
+          <span className="eyebrow">Available for freelance projects</span>
+          <p className={styles.body}>
+            I take on a small number of website and web application projects
+            each month alongside my full-time role. Typical response time:
+            within 24 hours on working days.
+          </p>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>
+              <span className={styles.dash}>—</span>
+              What you&apos;re looking to build
+            </li>
+            <li className={styles.listItem}>
+              <span className={styles.dash}>—</span>
+              Your approximate timeline
+            </li>
+            <li className={styles.listItem}>
+              <span className={styles.dash}>—</span>
+              Your budget range
+            </li>
+          </ul>
+          <p className={`${styles.body} ${styles.closing}`}>
+            I&apos;ll come back with whether it&apos;s a fit and what the next
+            step looks like.
+          </p>
+        </div>
+
         <div className="cta-box reveal">
           <div className="gw"></div>
           <div className="gw gw2"></div>

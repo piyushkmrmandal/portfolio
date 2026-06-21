@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.serviceTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.serviceDesc {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--muted);
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--blue-700);
+  background: var(--lav-3);
+  border: 1px solid var(--lav-2);
+  border-radius: var(--r-pill);
+  padding: 5px 14px;
+  display: inline-block;
+  margin-bottom: 22px;
+  width: fit-content;
+  letter-spacing: 0.01em;
+}
+
+.cta {
+  margin-top: auto;
+  align-self: flex-start;
+}

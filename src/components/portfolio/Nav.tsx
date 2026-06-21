@@ -9,6 +9,7 @@ export function Nav() {
           <a href="#hero" data-sec="hero" className="active">Home</a>
           <a href="#about" data-sec="about">About</a>
           <a href="#skills" data-sec="skills">Skills</a>
+          <a href="#services" data-sec="services">Services</a>
           <a href="#work" data-sec="work">Work</a>
           <a href="#awards" data-sec="awards">Awards</a>
         </div>
@@ -27,6 +28,7 @@ export function Nav() {
         <a href="#hero">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>

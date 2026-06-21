@@ -1,0 +1,129 @@
+.webSection {
+  margin-bottom: clamp(48px, 7vh, 80px);
+}
+
+.webHead {
+  margin-bottom: clamp(28px, 4vh, 44px);
+}
+
+.placeholder {
+  font-size: 15px;
+  color: var(--muted);
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin-top: clamp(40px, 6vh, 64px);
+}
+
+/* ── Demo project cards (future state) ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-sm);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sh-md);
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.typeTag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--lav-3);
+  border: 1px solid var(--lav-2);
+  border-radius: var(--r-pill);
+  padding: 4px 12px;
+  display: inline-block;
+  width: fit-content;
+  letter-spacing: 0.02em;
+}
+
+.cardTitle {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+}
+
+.cardBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--ink);
+  border-radius: var(--r-pill);
+  padding: 8px 18px;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s;
+}
+
+.actionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sh-sm);
+}
+
+.actionBtnGhost {
+  background: transparent;
+  color: var(--ink-2);
+  border: 1px solid var(--line-2);
+}
+
+.actionBtnGhost:hover {
+  background: var(--surface-2);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
