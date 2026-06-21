@@ -101,14 +101,28 @@ const AI_TOOLS = [
   },
   {
     name: "Openclaw",
-    bg: "#c0392b",
+    bg: "#1a0a0a",
     logo: (
       // eslint-disable-next-line @next/next/no-img-element
       <img
         src="/logos/ai/openclaw.png"
         alt="Openclaw"
-        width={42}
-        height={42}
+        width={46}
+        height={46}
+        style={{ objectFit: "contain" }}
+      />
+    ),
+  },
+  {
+    name: "GitLab Duo",
+    bg: "#2a1a0a",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/gitlab-duo.svg"
+        alt="GitLab Duo"
+        width={32}
+        height={32}
         style={{ objectFit: "contain" }}
       />
     ),
