@@ -5,86 +5,98 @@ const AI_TOOLS = [
     name: "Claude Code",
     bg: "#c96442",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <path d="M27.18 9L36 39H29.52L27.84 33.12H19.44L17.76 39H11.28L20.1 9H27.18ZM23.64 16.2L20.88 27.72H26.4L23.64 16.2Z" fill="white"/>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/claude-code.svg"
+        alt="Claude Code"
+        width={30}
+        height={30}
+        style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
+      />
     ),
   },
   {
     name: "GitHub Copilot",
     bg: "#161b22",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <circle cx="24" cy="18" r="9" stroke="white" strokeWidth="2.2" fill="none"/>
-        <circle cx="17" cy="21" r="2.5" fill="white"/>
-        <circle cx="31" cy="21" r="2.5" fill="white"/>
-        <path d="M17 28c0 0 2 3 7 3s7-3 7-3" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M15 18c0-4.97 4.03-9 9-9s9 4.03 9 9" stroke="white" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
-        <path d="M10 36c0-4 6.27-7 14-7s14 3 14 7" stroke="white" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/github-copilot.svg"
+        alt="GitHub Copilot"
+        width={30}
+        height={30}
+        style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
+      />
     ),
   },
   {
     name: "Microsoft Copilot",
     bg: "#0f0f0f",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <rect x="8" y="8" width="14" height="14" rx="1" fill="#f25022"/>
-        <rect x="26" y="8" width="14" height="14" rx="1" fill="#7fba00"/>
-        <rect x="8" y="26" width="14" height="14" rx="1" fill="#00a4ef"/>
-        <rect x="26" y="26" width="14" height="14" rx="1" fill="#ffb900"/>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/microsoft-copilot.svg"
+        alt="Microsoft Copilot"
+        width={32}
+        height={32}
+        style={{ objectFit: "contain" }}
+      />
     ),
   },
   {
     name: "Higgsfield AI",
     bg: "#0d0d0d",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <path d="M10 10h6v28h-6z" fill="white"/>
-        <path d="M32 10h6v28h-6z" fill="white"/>
-        <rect x="10" y="21" width="28" height="6" rx="1" fill="white"/>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/higgsfield.png"
+        alt="Higgsfield AI"
+        width={36}
+        height={36}
+        style={{ objectFit: "contain", borderRadius: "8px" }}
+      />
     ),
   },
   {
     name: "Multi AI",
     bg: "#1a0533",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <circle cx="24" cy="24" r="4" fill="white"/>
-        <circle cx="10" cy="14" r="3" fill="white" opacity="0.85"/>
-        <circle cx="38" cy="14" r="3" fill="white" opacity="0.85"/>
-        <circle cx="10" cy="34" r="3" fill="white" opacity="0.7"/>
-        <circle cx="38" cy="34" r="3" fill="white" opacity="0.7"/>
-        <path d="M13 16l8 6M35 16l-8 6M13 32l8-6M35 32l-8-6" stroke="white" strokeWidth="1.6" strokeOpacity="0.6"/>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/multi-ai.svg"
+        alt="Multi AI"
+        width={30}
+        height={30}
+        style={{ objectFit: "contain" }}
+      />
     ),
   },
   {
     name: "Numerous AI",
-    bg: "#0a1628",
+    bg: "#0a0a18",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <rect x="8" y="8" width="8" height="8" rx="2" fill="white"/>
-        <rect x="20" y="8" width="8" height="8" rx="2" fill="white" opacity="0.8"/>
-        <rect x="32" y="8" width="8" height="8" rx="2" fill="white" opacity="0.6"/>
-        <rect x="8" y="20" width="8" height="8" rx="2" fill="white" opacity="0.8"/>
-        <rect x="20" y="20" width="8" height="8" rx="2" fill="white"/>
-        <rect x="32" y="20" width="8" height="8" rx="2" fill="white" opacity="0.8"/>
-        <rect x="8" y="32" width="8" height="8" rx="2" fill="white" opacity="0.6"/>
-        <rect x="20" y="32" width="8" height="8" rx="2" fill="white" opacity="0.8"/>
-        <rect x="32" y="32" width="8" height="8" rx="2" fill="white"/>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/numerous-ai.png"
+        alt="Numerous AI"
+        width={36}
+        height={36}
+        style={{ objectFit: "contain", borderRadius: "6px" }}
+      />
     ),
   },
   {
     name: "n8n",
-    bg: "#ea5b0c",
+    bg: "#1a0a10",
     logo: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-        <text x="3" y="33" fontSize="22" fontWeight="800" fontFamily="system-ui, sans-serif" fill="white" letterSpacing="-1">n8n</text>
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logos/ai/n8n.svg"
+        alt="n8n"
+        width={30}
+        height={30}
+        style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
+      />
     ),
   },
   {
