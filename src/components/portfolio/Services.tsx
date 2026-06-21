@@ -337,13 +337,13 @@ export function Services() {
                 <div className={styles.panelStrip}>
                   <div
                     className={styles.panelIconWrap}
-                    style={{ color: isActive ? accent : "var(--muted)" }}
+                    style={{ color: accent }}
                   >
                     <Icon size={20} strokeWidth={1.8} />
                   </div>
                   <span
                     className={styles.panelLabelRotated}
-                    style={{ color: isActive ? accent : "var(--muted-2)" }}
+                    style={{ color: accent }}
                   >
                     {label}
                   </span>
@@ -353,9 +353,6 @@ export function Services() {
                 <div className={styles.panelContent}>
                   <div className={styles.panelText}>
                     <div className={styles.panelMeta}>
-                      <span className={styles.panelEyebrow} style={{ color: accent }}>
-                        {label}
-                      </span>
                       <h3 className={styles.panelTitle}>{title}</h3>
                     </div>
                     <p className={styles.panelDesc}>{desc}</p>
