@@ -8,7 +8,12 @@
 .step {
   padding: 36px 40px 36px 0;
   border-top: 1px solid var(--line-2);
-  transition: background 0.3s var(--ease);
+  transition: background 0.3s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
 }
 
 .step:not(:last-child) {

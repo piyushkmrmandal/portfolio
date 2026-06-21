@@ -1,50 +1,270 @@
-.card {
+/* ── Panel Row ── */
+.panelRow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 12px;
+  height: 340px;
+  align-items: stretch;
 }
 
-.serviceLabel {
+/* ── Individual Panel ── */
+.panel {
+  flex: 1;
+  min-width: 72px;
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  transition:
+    flex 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    background 0.5s ease,
+    box-shadow 0.4s ease;
+  outline: none;
+}
+
+.panel:focus-visible {
+  box-shadow: 0 0 0 3px rgba(42, 69, 214, 0.35);
+}
+
+.panel:hover:not(.panelActive) {
+  border-color: var(--line-2);
+  box-shadow: var(--sh-sm);
+}
+
+/* Active panel expands */
+.panelActive {
+  flex: 7;
+  border-color: var(--panel-border, var(--accent));
+  background: linear-gradient(
+    135deg,
+    var(--panel-bg-from, #f0f2ff) 0%,
+    var(--panel-bg-to, #e8ecff) 100%
+  );
+  box-shadow: var(--sh-md);
+  cursor: default;
+}
+
+/* ── Collapsed strip (icon + rotated label) ── */
+.panelCollapsed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 72px;
+  min-width: 72px;
+  padding: 24px 0;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* Icon circle */
+.panelIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  transition: color 0.4s ease, background 0.4s ease;
+  flex-shrink: 0;
+}
+
+.panelActive .panelIconWrap {
+  background: color-mix(in oklch, var(--panel-accent, var(--accent)) 12%, white);
+}
+
+/* Rotated label */
+.panelLabelRotated {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  transition: color 0.4s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* ── Expanded Content ── */
+.panelContent {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  /* clips during collapse */
+  opacity: 0;
+  transform: translateX(18px);
+  pointer-events: none;
+  transition:
+    opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.05s,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+}
+
+.panelActive .panelContent {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.panelContentInner {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 32px 32px 4px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Large icon in expanded state */
+.panelIconLarge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: color-mix(in oklch, currentColor 10%, white);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* Meta: eyebrow + title */
+.panelMeta {
+  margin-bottom: 14px;
+}
+
+.panelEyebrow {
+  display: block;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: var(--muted-2);
   text-transform: uppercase;
-  margin-bottom: 8px;
-  margin-top: 4px;
+  margin-bottom: 6px;
 }
 
-.serviceTitle {
-  font-size: 20px;
+.panelTitle {
+  font-size: 22px;
   font-weight: 700;
   color: var(--ink);
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
-  line-height: 1.2;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
-.serviceDesc {
+.panelDesc {
   font-size: 14px;
-  line-height: 1.68;
+  line-height: 1.7;
   color: var(--muted);
   flex: 1;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  max-width: 44ch;
 }
 
-.price {
-  font-size: 12.5px;
+/* Footer row: price chip + CTA */
+.panelFooter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.panelPrice {
+  font-size: 12px;
   font-weight: 600;
-  color: var(--blue-700);
-  background: var(--lav-3);
-  border: 1px solid var(--lav-2);
-  border-radius: var(--r-pill);
-  padding: 5px 14px;
-  display: inline-block;
-  margin-bottom: 22px;
-  width: fit-content;
   letter-spacing: 0.01em;
+  border-radius: 999px;
+  border: 1px solid;
+  padding: 5px 14px;
+  white-space: nowrap;
 }
 
-.cta {
-  margin-top: auto;
-  align-self: flex-start;
+.panelCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 8px 8px 18px;
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.panelCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.22);
+}
+
+.panelCtaIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  display: grid;
+  place-items: center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.panelCta:hover .panelCtaIcon {
+  transform: rotate(-45deg);
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .panelRow {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panel {
+    flex: none !important;
+    min-width: unset;
+    width: 100%;
+    min-height: 72px;
+  }
+
+  .panelActive {
+    min-height: 300px;
+  }
+
+  .panelCollapsed {
+    flex-direction: row;
+    width: 100%;
+    min-width: unset;
+    height: 72px;
+    padding: 0 24px;
+    gap: 14px;
+  }
+
+  .panelLabelRotated {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .panelContent {
+    display: none;
+    transform: translateY(12px);
+  }
+
+  .panelActive .panelContent {
+    display: flex;
+  }
+
+  .panelContentInner {
+    padding: 0 24px 28px;
+  }
+
+  .panelIconLarge {
+    display: none;
+  }
 }

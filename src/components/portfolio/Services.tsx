@@ -1,18 +1,8 @@
 "use client";
 
-import type { PointerEvent } from "react";
-import { Globe, Layers, Server } from "lucide-react";
+import { useState } from "react";
+import { Globe, Layers, Server, ArrowUpRight } from "lucide-react";
 import styles from "./Services.module.css";
-
-function handleMove(e: PointerEvent<HTMLDivElement>) {
-  const el = e.currentTarget;
-  const r = el.getBoundingClientRect();
-  const x = e.clientX - r.left;
-  const y = e.clientY - r.top;
-  el.style.setProperty("--mx", x.toFixed(1));
-  el.style.setProperty("--my", y.toFixed(1));
-  el.style.setProperty("--mxp", (x / r.width).toFixed(3));
-}
 
 const SERVICES = [
   {
@@ -21,6 +11,9 @@ const SERVICES = [
     title: "Websites",
     desc: "Clean, fast, mobile-first websites for local businesses and professionals. Delivered in 2–3 weeks at a fixed price.",
     price: "From £499",
+    accentColor: "#4f63e7",
+    bgFrom: "#f0f2ff",
+    bgTo: "#e8ecff",
   },
   {
     Icon: Layers,
@@ -28,6 +21,9 @@ const SERVICES = [
     title: "Web Applications",
     desc: "Custom web apps — booking systems, client portals, dashboards, inventory tools. Built with React/Next.js and Java/Spring Boot.",
     price: "£2,000–£8,000",
+    accentColor: "#7c3aed",
+    bgFrom: "#f5f0ff",
+    bgTo: "#ede8ff",
   },
   {
     Icon: Server,
@@ -35,10 +31,15 @@ const SERVICES = [
     title: "Backend & API Development",
     desc: "Senior Java/Spring Boot engineering for startups and tech teams. API design, microservices, cloud migration, performance optimisation.",
     price: "Day rate or fixed-scope",
+    accentColor: "#0e7490",
+    bgFrom: "#f0faff",
+    bgTo: "#e3f6ff",
   },
 ] as const;
 
 export function Services() {
+  const [active, setActive] = useState(0);
+
   return (
     <section className="section" id="services" data-screen-label="Services">
       <div className="wrap">
@@ -51,25 +52,89 @@ export function Services() {
           </p>
         </div>
 
-        <div className="skills-grid spotlight-grid">
-          {SERVICES.map(({ Icon, label, title, desc, price }, i) => (
-            <div
-              key={label}
-              className={`skill-card reveal d${i + 1} ${styles.card}`}
-              onPointerMove={handleMove}
-            >
-              <div className="sc-ic">
-                <Icon size={22} />
+        <div className={styles.panelRow}>
+          {SERVICES.map(({ Icon, label, title, desc, price, accentColor, bgFrom, bgTo }, i) => {
+            const isActive = active === i;
+            return (
+              <div
+                key={label}
+                className={`${styles.panel} ${isActive ? styles.panelActive : ""} reveal`}
+                style={
+                  isActive
+                    ? ({
+                        "--panel-accent": accentColor,
+                        "--panel-bg-from": bgFrom,
+                        "--panel-bg-to": bgTo,
+                        "--panel-border": accentColor,
+                      } as React.CSSProperties)
+                    : ({} as React.CSSProperties)
+                }
+                onClick={() => setActive(i)}
+                role="button"
+                tabIndex={0}
+                aria-expanded={isActive}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setActive(i); }}
+              >
+                {/* Collapsed state: icon + rotated label */}
+                <div className={styles.panelCollapsed}>
+                  <div
+                    className={styles.panelIconWrap}
+                    style={{ color: isActive ? accentColor : "var(--muted)" }}
+                  >
+                    <Icon size={20} strokeWidth={1.8} />
+                  </div>
+                  <span
+                    className={styles.panelLabelRotated}
+                    style={{ color: isActive ? accentColor : "var(--muted-2)" }}
+                  >
+                    {label}
+                  </span>
+                </div>
+
+                {/* Expanded content */}
+                <div className={styles.panelContent}>
+                  <div className={styles.panelContentInner}>
+                    <div className={styles.panelIconLarge} style={{ color: accentColor }}>
+                      <Icon size={28} strokeWidth={1.5} />
+                    </div>
+
+                    <div className={styles.panelMeta}>
+                      <span className={styles.panelEyebrow} style={{ color: accentColor }}>
+                        {label}
+                      </span>
+                      <h3 className={styles.panelTitle}>{title}</h3>
+                    </div>
+
+                    <p className={styles.panelDesc}>{desc}</p>
+
+                    <div className={styles.panelFooter}>
+                      <span
+                        className={styles.panelPrice}
+                        style={{
+                          color: accentColor,
+                          borderColor: `color-mix(in oklch, ${accentColor} 30%, transparent)`,
+                          background: `color-mix(in oklch, ${accentColor} 8%, transparent)`,
+                        }}
+                      >
+                        {price}
+                      </span>
+                      <a
+                        href="#contact"
+                        className={styles.panelCta}
+                        style={{ background: accentColor }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Get in touch
+                        <span className={styles.panelCtaIcon}>
+                          <ArrowUpRight size={14} strokeWidth={2.5} />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className={styles.serviceLabel}>{label}</div>
-              <h3 className={styles.serviceTitle}>{title}</h3>
-              <p className={styles.serviceDesc}>{desc}</p>
-              <span className={styles.price}>{price}</span>
-              <a href="#contact" className={`btn btn-dark ${styles.cta}`}>
-                Get in touch <span className="pip">↗</span>
-              </a>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

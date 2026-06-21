@@ -1,15 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
+import { CardCarousel } from "@/components/ui/card-carousel";
 import { ArchitectureFlow } from "./ArchitectureFlow";
 import styles from "./Projects.module.css";
 import demoStyles from "./Projects.demo.module.css";
@@ -45,8 +38,8 @@ const PROJECTS: Project[] = [
     stages: ["IDE", "Gateway", "Sandbox", "Mentor", "Kafka"],
   },
   {
-    title: "Airbnb Clone",
-    desc: "A Spring Boot + React Airbnb replica that uses AI to scaffold applications on demand — a React UI calls a REST API where an AI builder generates listings persisted to the database.",
+    title: "StaySync — AI Property Platform",
+    desc: "A full-stack property rental platform powered by AI — a React UI calls a Spring Boot REST API where an AI builder scaffolds listings on demand, persisted to a managed database. Inspired by modern rental marketplace architecture.",
     repo: "https://github.com/piyushkmrmandal/airbnb-project",
     pills: ["Java", "Spring Boot", "React", "AI"],
     stages: ["UI", "API", "AI Builder", "Database", "Listings"],
@@ -68,27 +61,6 @@ const PROJECTS: Project[] = [
 ];
 
 export function Projects() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(false);
-
-  useEffect(() => {
-    if (!api) return;
-    const onSelect = () => {
-      setCurrent(api.selectedScrollSnap());
-      setCanPrev(api.canScrollPrev());
-      setCanNext(api.canScrollNext());
-    };
-    onSelect();
-    api.on("select", onSelect);
-    api.on("reInit", onSelect);
-    return () => {
-      api.off("select", onSelect);
-      api.off("reInit", onSelect);
-    };
-  }, [api]);
-
   return (
     <section className="section" id="projects" data-screen-label="Projects">
       <div className="wrap">
@@ -159,81 +131,12 @@ export function Projects() {
               explore the cloud-native, event-driven and AI tooling I build with.
             </p>
           </div>
-
-          <div className={styles.nav}>
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Previous project"
-              className={styles.navBtn}
-              disabled={!canPrev}
-              onClick={() => api?.scrollPrev()}
-            >
-              <ArrowLeft className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Next project"
-              className={styles.navBtn}
-              disabled={!canNext}
-              onClick={() => api?.scrollNext()}
-            >
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          </div>
         </div>
 
         <div className="reveal d1">
-          <Carousel
-            setApi={setApi}
-            opts={{ align: "start", containScroll: "trimSnaps" }}
-          >
-            <CarouselContent className={styles.track}>
-              {PROJECTS.map((p) => (
-                <CarouselItem key={p.repo} className={styles.item}>
-                  <article className={styles.card}>
-                    <div className={styles.visual}>
-                      <span className={styles.visualLabel}>Architecture</span>
-                      <ArchitectureFlow stages={p.stages} />
-                    </div>
-                    <div className={styles.body}>
-                      <h3 className={styles.title}>{p.title}</h3>
-                      <p className={styles.desc}>{p.desc}</p>
-                      <div className={styles.pills}>
-                        {p.pills.map((pill) => (
-                          <span key={pill}>{pill}</span>
-                        ))}
-                      </div>
-                      <a
-                        className={styles.link}
-                        href={p.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink />
-                        View on GitHub ↗
-                      </a>
-                    </div>
-                  </article>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+          <CardCarousel items={PROJECTS} />
         </div>
 
-        <div className={styles.dots}>
-          {PROJECTS.map((p, i) => (
-            <button
-              key={p.repo}
-              type="button"
-              aria-label={`Go to project ${i + 1}`}
-              aria-current={current === i}
-              className={`${styles.dot} ${current === i ? styles.dotActive : ""}`}
-              onClick={() => api?.scrollTo(i)}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

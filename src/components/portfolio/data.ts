@@ -22,9 +22,9 @@ export const WORK: Work[] = [
   {
     tag: "Barclays · USCB Cards",
     title: "Enterprise Credit Decisioning Platform",
-    desc: "RFT decides the credit issued to a card applicant — combining bureau data and fraud signals, then applying partner-specific strategies. I refactored the microservices and decisioning flows behind it.",
+    desc: "RFT decides the credit issued to a card applicant — combining bureau data and fraud signals, then applying partner-specific strategies. I refactored the microservices and decisioning flows, lifting daily throughput from 15K to 25–30K applications in production.",
     pills: ["Java", "Spring Boot", "REST", "Experian", "Microservices"],
-    metrics: [["Real-time", "Decisioning"], ["End-to-end", "USCB APIs"]],
+    metrics: [["15K → 30K", "Applications/day"], ["Real-time", "End-to-end"]],
     stages: ["Applicant", "Decision", "Bureau", "Fraud", "Response"],
   },
   {
@@ -32,7 +32,7 @@ export const WORK: Work[] = [
     title: "Cloud-Native Migration to OpenShift V4",
     desc: "Re-platformed a legacy application onto the OpenShift V4 template — highly available, fault-tolerant and auto-scalable — introducing OAuth as part of the transition.",
     pills: ["OpenShift V4", "AWS", "Docker", "OAuth"],
-    metrics: [["24/7", "Availability"], ["Auto-scale", "Elastic"]],
+    metrics: [["45 TPS", "Zero Downtime"], ["24/7", "Auto-scale"]],
     stages: ["Legacy", "Containerize", "OpenShift", "Scale", "Resilient"],
   },
   {
@@ -46,17 +46,17 @@ export const WORK: Work[] = [
   {
     tag: "Barclays · Observability",
     title: "Real-Time Monitoring & Observability",
-    desc: "A unified view of application logs and system health built on the ELK stack and AppDynamics, so production issues surface fast and root-cause is immediate.",
+    desc: "A unified view of application logs and system health built on the ELK stack and AppDynamics. Reduced analysis and report creation time from 1–2 days to under 15 minutes, with flexible report formats and on-demand alerts for proactive monitoring.",
     pills: ["ELK", "AppDynamics", "Grafana", "Splunk"],
-    metrics: [["Live", "Dashboards"], ["APM", "Health"]],
+    metrics: [["Days → 15 min", "Report Creation"], ["On-demand", "Proactive Alerts"]],
     stages: ["Services", "Logstash", "Search", "Kibana", "Alert"],
   },
   {
     tag: "Google · Trust & Safety",
     title: "Google Devshop Automation Ecosystem",
-    desc: "Browser extensions and dashboards that automate Google Trust & Safety operations — a JS frontend with a Python backend and Cloud SQL, deployed on App Engine.",
+    desc: "Browser extensions and dashboards that automate Google Trust & Safety operations — a JS frontend with a Python backend and Cloud SQL, deployed on App Engine. Reduced overnight manual efforts to 5–10 minute automated execution for the team.",
     pills: ["JavaScript", "Python", "GCP", "App Engine", "Cloud SQL"],
-    metrics: [["Team 15", "Devshop"], ["Automated", "Operations"]],
+    metrics: [["Overnight → 5 min", "Execution Time"], ["Team 15", "Automated"]],
     stages: ["Extension", "Operator", "Backend", "App Engine", "SQL"],
   },
 ];

@@ -1,7 +1,6 @@
 .availBlock {
   text-align: left;
-  max-width: 65ch;
-  margin-bottom: 80px;
+  margin-bottom: 96px;
 }
 
 .body {
@@ -45,4 +44,22 @@
   line-height: 1.65;
   color: var(--muted-2);
   font-style: italic;
+}
+
+.availLayout {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.availText {
+  flex: 1;
+  padding-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .availLayout {
+    flex-direction: column;
+    gap: 40px;
+  }
 }

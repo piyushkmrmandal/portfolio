@@ -1,34 +1,37 @@
 import styles from "./Contact.module.css";
+import { ProfileCard } from "@/components/ui/profile-card";
 
 export function Contact() {
   return (
     <section className="section" id="contact" data-screen-label="Contact">
       <div className="wrap">
         <div className={`${styles.availBlock} reveal`}>
-          <span className="eyebrow">Available for freelance projects</span>
-          <p className={styles.body}>
-            I take on a small number of website and web application projects
-            each month alongside my full-time role. Typical response time:
-            within 24 hours on working days.
-          </p>
-          <ul className={styles.list}>
-            <li className={styles.listItem}>
-              <span className={styles.dash}>—</span>
-              What you&apos;re looking to build
-            </li>
-            <li className={styles.listItem}>
-              <span className={styles.dash}>—</span>
-              Your approximate timeline
-            </li>
-            <li className={styles.listItem}>
-              <span className={styles.dash}>—</span>
-              Your budget range
-            </li>
-          </ul>
-          <p className={`${styles.body} ${styles.closing}`}>
-            I&apos;ll come back with whether it&apos;s a fit and what the next
-            step looks like.
-          </p>
+          <div className={styles.availLayout}>
+            <ProfileCard />
+            <div className={styles.availText}>
+              <span className="eyebrow">Available for freelance projects</span>
+              <p className={styles.body}>
+                I take on a small number of website and web application projects each month alongside my full-time role. Feel free to share:
+              </p>
+              <ul className={styles.list}>
+                <li className={styles.listItem}>
+                  <span className={styles.dash}>—</span>
+                  What you&apos;re looking to build
+                </li>
+                <li className={styles.listItem}>
+                  <span className={styles.dash}>—</span>
+                  Your approximate timeline
+                </li>
+                <li className={styles.listItem}>
+                  <span className={styles.dash}>—</span>
+                  Your budget range
+                </li>
+              </ul>
+              <p className={`${styles.body} ${styles.closing}`}>
+                I&apos;ll review your message and respond with whether it&apos;s a good fit and what the next step looks like.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="cta-box reveal">
