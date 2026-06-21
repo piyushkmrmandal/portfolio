@@ -62,6 +62,20 @@
   padding: 24px 0;
   flex-shrink: 0;
   z-index: 1;
+  position: relative;
+}
+
+/* Dark blurred cover over the strip when panel is open */
+.panelActive .panelStrip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px 0 0 20px;
+  z-index: 10;
+  transition: opacity 0.35s ease;
 }
 
 .panelIconWrap {
