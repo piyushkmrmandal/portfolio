@@ -89,38 +89,25 @@ function StaySyncVisual() {
   );
 }
 
-// ── MSSC Brewery: JMS microservice flow ───────────────────────────────────
+// ── MSSC Brewery: Higgsfield-generated cinematic brewery video ─────────────
 function BreweryVisual() {
   return (
-    <div style={{ width: "100%", height: "100%", background: "#060d1a", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", padding: 10 }}>
-      <svg width="100%" height="100%" viewBox="0 0 300 190" fill="none">
-        {[
-          { x: 30,  y: 95,  label: "ORDER",    sub: "REST API",   col: "#4258e6" },
-          { x: 112, y: 45,  label: "JMS",       sub: "Queue",      col: "#7c3aed" },
-          { x: 112, y: 145, label: "DOCKER",    sub: "Container",  col: "#0e7490" },
-          { x: 205, y: 95,  label: "DELIVERY",  sub: "Service",    col: "#059669" },
-        ].map((n, i) => (
-          <g key={n.label} style={{ animation: `ccSlideIn 0.3s ${i * 0.09}s both` }}>
-            <rect x={n.x - 32} y={n.y - 22} width={64} height={44} rx={9} fill={`${n.col}1a`} stroke={n.col} strokeWidth={1.4} />
-            <text x={n.x} y={n.y - 4} textAnchor="middle" fill={n.col} fontSize={9} fontWeight={700}>{n.label}</text>
-            <text x={n.x} y={n.y + 10} textAnchor="middle" fill={`${n.col}99`} fontSize={8}>{n.sub}</text>
-          </g>
-        ))}
-        {[
-          { d: "M 62 84 L 80 57",  delay: 0.4 },
-          { d: "M 62 106 L 80 133", delay: 0.5 },
-          { d: "M 144 55 L 173 85", delay: 0.6 },
-          { d: "M 144 135 L 173 105",delay: 0.7 },
-        ].map((l, i) => (
-          <path key={i} d={l.d} stroke="rgba(255,255,255,0.12)" strokeWidth={1.5} strokeDasharray="120" strokeDashoffset="120"
-            style={{ animation: `ccLineDraw 0.5s ${l.delay}s cubic-bezier(0.22,1,0.36,1) forwards` }} />
-        ))}
-        <circle r={4.5} fill="#4258e6">
-          <animateMotion dur="2.8s" repeatCount="indefinite"
-            path="M 62 84 L 80 57 L 112 55 L 144 55 L 173 85 L 205 95 L 173 105 L 144 135 L 112 135 L 80 133 L 62 106 Z" />
-        </circle>
-        <text x={150} y={182} textAnchor="middle" fill="rgba(255,255,255,0.22)" fontSize={8.5}>Spring Boot · JMS · Spring Cloud</text>
-      </svg>
+    <div style={{ width: "100%", height: "100%", position: "relative", borderRadius: 10, overflow: "hidden", background: "#060d1a" }}>
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+      >
+        <source src="/videos/brewery.mp4" type="video/mp4" />
+      </video>
+      {/* Tech overlay */}
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(6,13,26,0.85) 0%, rgba(6,13,26,0.15) 60%, transparent 100%)" }} />
+      <div style={{ position: "absolute", bottom: 10, left: 0, right: 0, textAlign: "center" }}>
+        <span style={{ fontSize: 8.5, color: "rgba(255,255,255,0.45)", letterSpacing: "0.06em", fontWeight: 600 }}>Spring Boot · JMS · Spring Cloud</span>
+      </div>
     </div>
   );
 }
