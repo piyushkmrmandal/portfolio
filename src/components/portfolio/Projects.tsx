@@ -3,7 +3,6 @@
 import { ExternalLink } from "lucide-react";
 
 import { CardCarousel } from "@/components/ui/card-carousel";
-import { ArchitectureFlow } from "./ArchitectureFlow";
 import styles from "./Projects.module.css";
 import demoStyles from "./Projects.demo.module.css";
 
