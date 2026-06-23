@@ -1,13 +1,32 @@
 .availBlock {
+  margin-bottom: 64px;
+}
+
+.availCard {
+  background: #09090f;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 28px;
+  padding: 48px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 32px 80px rgba(0, 0, 0, 0.3);
   text-align: left;
-  margin-bottom: 96px;
+}
+
+.availLayout {
+  display: flex;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.availText {
+  flex: 1;
+  padding-top: 4px;
 }
 
 .body {
   margin-top: 20px;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.72;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.55);
   max-width: 65ch;
 }
 
@@ -26,12 +45,12 @@
   gap: 12px;
   font-size: 15px;
   line-height: 1.55;
-  color: var(--ink-2);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
 }
 
 .dash {
-  color: var(--accent);
+  color: #a3e635;
   flex-shrink: 0;
   font-weight: 700;
   font-size: 14px;
@@ -40,24 +59,16 @@
 
 .closing {
   margin-top: 24px;
-  font-size: 14.5px;
+  font-size: 14px;
   line-height: 1.65;
-  color: var(--muted-2);
+  color: rgba(255, 255, 255, 0.32);
   font-style: italic;
 }
 
-.availLayout {
-  display: flex;
-  align-items: flex-start;
-  gap: 64px;
-}
-
-.availText {
-  flex: 1;
-  padding-top: 8px;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .availCard {
+    padding: 32px 24px;
+  }
   .availLayout {
     flex-direction: column;
     gap: 40px;
