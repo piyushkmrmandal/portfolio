@@ -232,9 +232,9 @@ export function CardCarousel({ items, autoplayDelay = 4200 }: CardCarouselProps)
 
   const navBtnBase: React.CSSProperties = {
     position: "absolute",
-    top: "calc(50% - 30px)",
+    top: 265,
     transform: "translateY(-50%)",
-    zIndex: 20,
+    zIndex: 50,
     width: 38,
     height: 38,
     borderRadius: "50%",
@@ -258,8 +258,8 @@ export function CardCarousel({ items, autoplayDelay = 4200 }: CardCarouselProps)
     >
       <style>{KEYFRAMES}</style>
 
-      {/* 3-D stage */}
-      <div style={{ position: "relative", height: 530, perspective: "1300px", perspectiveOrigin: "50% 42%" }}>
+      {/* 3-D stage — isolation:isolate contains the 3D stacking context so nav buttons always paint on top */}
+      <div style={{ position: "relative", height: 530, perspective: "1300px", perspectiveOrigin: "50% 42%", isolation: "isolate" }}>
         {items.map((item, idx) => {
           const offset = getOffset(idx);
           const isCenter = offset === 0;
