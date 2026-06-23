@@ -362,25 +362,24 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
 /* ============ SKILLS SHOWCASE ============ */
 .sk-showcase {
   display: grid;
-  grid-template-columns: 560px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: flex-start;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 /* Left: 3-column staggered card grid */
 .sk-card-grid {
   display: flex;
   gap: 14px;
-  flex-shrink: 0;
   padding-bottom: 68px;
+  justify-content: flex-end; /* push cards toward the center gap */
 }
 .sk-col {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  flex: 1;
+  width: 160px;
+  flex-shrink: 0;
 }
 .sk-card {
   display: flex;
