@@ -258,13 +258,23 @@ export function CardCarousel({ items, autoplayDelay = 4200 }: CardCarouselProps)
     >
       <style>{KEYFRAMES}</style>
 
-      {/* 3-D stage — isolation:isolate contains the 3D stacking context so nav buttons always paint on top */}
-      <div style={{ position: "relative", height: 530, perspective: "1300px", perspectiveOrigin: "50% 42%", isolation: "isolate" }}>
-        {items.map((item, idx) => {
-          const offset = getOffset(idx);
-          const isCenter = offset === 0;
-          const abs = Math.abs(offset);
-          if (abs > 2) return null;
+      {/* Nav buttons sit OUTSIDE the clip container so cards can never overlap them */}
+      <button aria-label="Previous project" onClick={() => goTo(activeIdx - 1)} style={{ ...navBtnBase, left: 0 }}>
+        <ChevronLeft size={18} strokeWidth={2.5} />
+      </button>
+      <button aria-label="Next project" onClick={() => goTo(activeIdx + 1)} style={{ ...navBtnBase, right: 0 }}>
+        <ChevronRight size={18} strokeWidth={2.5} />
+      </button>
+
+      {/* Clip wrapper — side margin reserves space for the arrow buttons */}
+      <div style={{ overflow: "hidden", margin: "0 56px", borderRadius: 4 }}>
+        {/* 3-D stage */}
+        <div style={{ position: "relative", height: 530, perspective: "1300px", perspectiveOrigin: "50% 42%" }}>
+          {items.map((item, idx) => {
+            const offset = getOffset(idx);
+            const isCenter = offset === 0;
+            const abs = Math.abs(offset);
+            if (abs > 1) return null; // only center + ±1 — keeps cards inside the clipped stage
 
           const Visual = PROJECT_VISUALS[item.title] ?? BreweryVisual;
 
@@ -309,16 +319,9 @@ export function CardCarousel({ items, autoplayDelay = 4200 }: CardCarouselProps)
               )}
             </div>
           );
-        })}
-      </div>
-
-      {/* Navigation buttons */}
-      <button aria-label="Previous project" onClick={() => goTo(activeIdx - 1)} style={{ ...navBtnBase, left: 0 }}>
-        <ChevronLeft size={18} strokeWidth={2.5} />
-      </button>
-      <button aria-label="Next project" onClick={() => goTo(activeIdx + 1)} style={{ ...navBtnBase, right: 0 }}>
-        <ChevronRight size={18} strokeWidth={2.5} />
-      </button>
+          })}
+        </div>{/* end 3-D stage */}
+      </div>{/* end clip wrapper */}
 
       {/* Dot indicators */}
       <div style={{ display: "flex", justifyContent: "center", gap: 7, marginTop: 14 }}>
