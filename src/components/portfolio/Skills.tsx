@@ -46,7 +46,7 @@ const LOGO_MAP: Record<string, string> = {
 };
 
 /* 3-column staggered layout matching team-showcase offset pattern */
-const COL_OFFSETS = ["0px", "68px", "32px"] as const;
+const COL_OFFSETS = ["0px", "88px", "42px"] as const;
 
 export function Skills() {
   const [activeIdx, setActiveIdx] = useState(0);
