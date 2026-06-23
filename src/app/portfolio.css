@@ -365,6 +365,7 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
   grid-template-columns: 560px 1fr;
   gap: 60px;
   align-items: flex-start;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -410,7 +411,7 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
 
 /* Right: items as a list */
 .sk-panel { display: flex; flex-direction: column; padding-top: 4px; }
-.sk-panel-heading { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+.sk-panel-heading { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
 .sk-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
 .sk-item {
   display: flex;
