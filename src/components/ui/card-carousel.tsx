@@ -89,25 +89,109 @@ function StaySyncVisual() {
   );
 }
 
-// ── MSSC Brewery: Higgsfield-generated cinematic brewery video ─────────────
+// ── MSSC Brewery: Beer ordering pipeline SVG animation ────────────────────
 function BreweryVisual() {
+  const nodes = [
+    { x: 56,  label: "ORDER",   sub: "REST API",  col: "#f59e0b", icon: "🍺" },
+    { x: 150, label: "JMS",     sub: "Queue",     col: "#a78bfa", icon: "📨" },
+    { x: 244, label: "PAYMENT", sub: "Service",   col: "#38bdf8", icon: "💳" },
+    { x: 338, label: "DELIVER", sub: "Confirmed", col: "#34d399", icon: "🚚" },
+  ];
   return (
-    <div style={{ width: "100%", height: "100%", position: "relative", borderRadius: 10, overflow: "hidden", background: "#060d1a" }}>
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-      >
-        <source src="/videos/brewery.mp4" type="video/mp4" />
-      </video>
-      {/* Tech overlay */}
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(6,13,26,0.85) 0%, rgba(6,13,26,0.15) 60%, transparent 100%)" }} />
-      <div style={{ position: "absolute", bottom: 10, left: 0, right: 0, textAlign: "center" }}>
-        <span style={{ fontSize: 8.5, color: "rgba(255,255,255,0.45)", letterSpacing: "0.06em", fontWeight: 600 }}>Spring Boot · JMS · Spring Cloud</span>
-      </div>
+    <div style={{ width: "100%", height: "100%", background: "#06080f", borderRadius: 10, overflow: "hidden", position: "relative" }}>
+      <style>{`
+        @keyframes brewBubble {
+          0%   { transform: translateY(0) scale(1); opacity: 0.7; }
+          100% { transform: translateY(-38px) scale(0.3); opacity: 0; }
+        }
+        @keyframes brewPulse {
+          0%,100% { opacity: 0.18; r: 22; }
+          50%      { opacity: 0.32; r: 26; }
+        }
+        @keyframes brewStatusSlide {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes brewNodeIn {
+          from { opacity: 0; transform: translateY(6px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+
+      <svg width="100%" height="100%" viewBox="0 0 394 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="bgGlow" cx="50%" cy="55%" r="55%">
+            <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.06" />
+            <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+          </radialGradient>
+          <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" result="b" />
+            <feComposite in="SourceGraphic" in2="b" operator="over" />
+          </filter>
+        </defs>
+
+        {/* Background glow */}
+        <rect width="394" height="200" fill="url(#bgGlow)" />
+
+        {/* Eyebrow */}
+        <text x="197" y="18" textAnchor="middle" fill="rgba(245,158,11,0.45)" fontSize="7.5" fontWeight="700" letterSpacing="0.14em">AUTOMATED BEER ORDERING SYSTEM</text>
+
+        {/* Connecting pipeline */}
+        {nodes.slice(0, -1).map((n, i) => (
+          <line key={i}
+            x1={n.x + 28} y1={95} x2={nodes[i + 1].x - 28} y2={95}
+            stroke="rgba(255,255,255,0.08)" strokeWidth="2" strokeDasharray="4 3"
+            style={{ animation: `brewNodeIn 0.3s ${0.5 + i * 0.12}s both` }}
+          />
+        ))}
+
+        {/* Nodes */}
+        {nodes.map((n, i) => (
+          <g key={n.label} style={{ animation: `brewNodeIn 0.35s ${i * 0.1}s both` }}>
+            {/* Glow ring */}
+            <circle cx={n.x} cy={95} fill={n.col} opacity="0.12" style={{ animation: `brewPulse 2.2s ${i * 0.5}s ease-in-out infinite` }}>
+              <animate attributeName="r" values="22;26;22" dur="2.2s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+            </circle>
+            {/* Node circle */}
+            <circle cx={n.x} cy={95} r="20" fill={`${n.col}18`} stroke={n.col} strokeWidth="1.4" filter="url(#softGlow)" />
+            {/* Icon */}
+            <text x={n.x} y={100} textAnchor="middle" fontSize="13">{n.icon}</text>
+            {/* Label */}
+            <text x={n.x} y={126} textAnchor="middle" fill={n.col} fontSize="8" fontWeight="700" letterSpacing="0.06em">{n.label}</text>
+            {/* Sub */}
+            <text x={n.x} y={137} textAnchor="middle" fill={`${n.col}80`} fontSize="7">{n.sub}</text>
+          </g>
+        ))}
+
+        {/* Animated order packet (beer bottle 🍾) */}
+        <text fontSize="11" style={{ filter: "url(#softGlow)" }}>
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 28 95 L 366 95" keyTimes="0;1" calcMode="linear" />
+          🍾
+        </text>
+
+        {/* Beer bubbles rising from ORDER */}
+        {[0, 1, 2].map(i => (
+          <circle key={i} cx={46 + i * 6} cy={75} r={2.5 - i * 0.5}
+            fill="#f59e0b" opacity="0.6"
+            style={{ animation: `brewBubble 1.8s ${i * 0.55}s ease-out infinite` }}
+          />
+        ))}
+
+        {/* Scrolling status ticker */}
+        <rect x="0" y="158" width="394" height="24" fill="rgba(255,255,255,0.03)" />
+        <rect x="0" y="158" width="394" height="1" fill="rgba(255,255,255,0.07)" />
+        <g style={{ animation: "brewStatusSlide 10s linear infinite" }}>
+          {/* two copies for seamless loop */}
+          {[0, 1].map(copy => (
+            <text key={copy} x={copy * 500} y="174" fill="rgba(255,255,255,0.28)" fontSize="8" fontWeight="500" letterSpacing="0.04em">
+              {["🍺 Order #1842 received", "📨 JMS dispatched", "💳 Payment confirmed  ✓", "🚚 Delivery in progress", "☁️ Spring Cloud orchestrating", "🐳 Docker · Spring Boot · JMS messaging   ·   "].join("   ·   ")}
+            </text>
+          ))}
+        </g>
+
+        {/* Bottom tag */}
+        <text x="197" y="192" textAnchor="middle" fill="rgba(255,255,255,0.2)" fontSize="7.5" letterSpacing="0.06em">Spring Boot · JMS · Docker · Spring Cloud</text>
+      </svg>
     </div>
   );
 }
