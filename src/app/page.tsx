@@ -13,6 +13,7 @@ import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { FolioRuntime } from "@/components/portfolio/FolioRuntime";
+import { SectionDots } from "@/components/portfolio/SectionDots";
 import { Intro } from "@/components/portfolio/Intro";
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <SectionDots />
       <FolioRuntime />
     </>
   );

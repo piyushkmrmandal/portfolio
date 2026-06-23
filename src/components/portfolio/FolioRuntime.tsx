@@ -67,8 +67,19 @@ export function FolioRuntime() {
         .map((l) => document.getElementById(l.dataset.sec || ""))
         .filter((s): s is HTMLElement => !!s);
       let ticking = false;
+      let lastScrollY = window.scrollY;
       function onScroll() {
-        nav!.classList.toggle("scrolled", window.scrollY > 30);
+        const y = window.scrollY;
+        nav!.classList.toggle("scrolled", y > 30);
+        // Hide on scroll-down, reveal on scroll-up; always show near top
+        if (y < 100) {
+          nav!.classList.remove("nav-hidden");
+        } else if (y > lastScrollY + 4) {
+          nav!.classList.add("nav-hidden");
+        } else if (y < lastScrollY - 4) {
+          nav!.classList.remove("nav-hidden");
+        }
+        lastScrollY = y;
         let cur: HTMLElement | undefined = secs[0];
         for (const s of secs) if (s.getBoundingClientRect().top <= 140) cur = s;
         const id = cur && cur.id;
