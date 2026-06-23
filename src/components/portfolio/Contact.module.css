@@ -1,39 +1,46 @@
-.availBlock {
-  margin-bottom: 64px;
-}
-
-.availCard {
+/* Single big black card */
+.bigCard {
   background: #09090f;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 28px;
-  padding: 48px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 32px 80px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 40px 100px rgba(0, 0, 0, 0.35);
+  margin-bottom: 80px;
   text-align: left;
+  opacity: 1;
 }
 
-.availLayout {
+/* Top body: left profile + right text */
+.cardBody {
   display: flex;
   align-items: flex-start;
-  gap: 56px;
+  gap: 64px;
+  padding: 48px 48px 40px;
 }
 
-.availText {
+.left {
+  flex: 0 0 380px;
+  max-width: 420px;
+}
+
+.right {
   flex: 1;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 
+/* Right-side text */
 .body {
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 16px;
   line-height: 1.72;
-  color: rgba(255, 255, 255, 0.55);
-  max-width: 65ch;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 62ch;
 }
 
 .list {
   list-style: none;
   padding: 0;
-  margin: 24px 0 0;
+  margin: 20px 0 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -45,7 +52,7 @@
   gap: 12px;
   font-size: 15px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.72);
   font-weight: 500;
 }
 
@@ -57,20 +64,47 @@
   user-select: none;
 }
 
-.closing {
-  margin-top: 24px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.32);
-  font-style: italic;
+/* Neon footer bar */
+.neonBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 32px;
+  background: #a3e635;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f1a00;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.neonIcon {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.neonDivider {
+  opacity: 0.45;
+  font-weight: 400;
 }
 
 @media (max-width: 900px) {
-  .availCard {
-    padding: 32px 24px;
-  }
-  .availLayout {
+  .cardBody {
     flex-direction: column;
     gap: 40px;
+    padding: 32px 24px 28px;
+  }
+
+  .left {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .neonBar {
+    padding: 12px 20px;
+    font-size: 12.5px;
   }
 }
