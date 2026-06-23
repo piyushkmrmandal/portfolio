@@ -362,32 +362,34 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
 /* ============ SKILLS SHOWCASE ============ */
 .sk-showcase {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 48px;
+  grid-template-columns: 460px 1fr;
+  gap: 56px;
   align-items: flex-start;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 /* Left: 3-column staggered card grid */
 .sk-card-grid {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   flex-shrink: 0;
-  padding-bottom: 68px; /* match max offset so grid height is consistent */
+  padding-bottom: 68px;
 }
 .sk-col {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   flex: 1;
 }
 .sk-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 20px 16px;
+  gap: 10px;
+  padding: 26px 22px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--sh-sm);
   cursor: pointer;
   text-align: left;
@@ -398,42 +400,43 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
   opacity: 1;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(66,88,230,0.1), var(--sh-sm);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
-.sk-card-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--lav); color: var(--blue-700); display: grid; place-items: center; }
-.sk-card-icon svg { width: 18px; height: 18px; }
-.sk-card-name { font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.3; margin: 0; }
+.sk-card-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--lav); color: var(--blue-700); display: grid; place-items: center; }
+.sk-card-icon svg { width: 22px; height: 22px; }
+.sk-card-name { font-size: 14.5px; font-weight: 700; color: var(--ink); line-height: 1.3; margin: 0; }
 .sk-card--active .sk-card-name { color: var(--accent); }
-.sk-card-count { font-size: 11px; color: var(--muted); font-weight: 500; }
+.sk-card-count { font-size: 12px; color: var(--muted); font-weight: 500; }
 
 /* Right: items as a list */
 .sk-panel { display: flex; flex-direction: column; padding-top: 4px; }
-.sk-panel-heading { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
-.sk-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0; }
+.sk-panel-heading { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+.sk-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
 .sk-item {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 13px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 11px 12px;
+  border-radius: 12px;
   cursor: default;
+  transition: background 0.18s ease;
 }
-.sk-item:last-child { border-bottom: none; }
+.sk-item:hover { background: var(--surface-2); }
 .sk-item-indicator {
   display: block;
-  width: 4px;
-  height: 24px;
+  width: 3px;
+  height: 22px;
   border-radius: 3px;
   background: var(--accent);
   flex-shrink: 0;
-  opacity: 0.25;
-  transition: width 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
-.sk-item:hover .sk-item-indicator { width: 14px; opacity: 1; }
+.sk-item:hover .sk-item-indicator { opacity: 1; }
 .sk-item-logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
   background: var(--surface-2);
   border: 1px solid var(--line);
   display: flex;
@@ -441,8 +444,8 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
   justify-content: center;
   flex-shrink: 0;
 }
-.sk-item-img { width: 20px; height: 20px; object-fit: contain; }
-.sk-item-name { font-size: 15px; font-weight: 600; color: var(--ink); }
+.sk-item-img { width: 22px; height: 22px; object-fit: contain; }
+.sk-item-name { font-size: 15.5px; font-weight: 600; color: var(--ink); }
 
 @media (max-width: 1024px) {
   .sk-showcase { grid-template-columns: 1fr; gap: 32px; }
