@@ -45,9 +45,17 @@ const LOGO_MAP: Record<string, string> = {
   "JUnit · Mockito":   "/logos/skills/junit.svg",
 };
 
+/* 3-column staggered layout matching team-showcase offset pattern */
+const COL_OFFSETS = ["0px", "68px", "32px"] as const;
+
 export function Skills() {
   const [activeIdx, setActiveIdx] = useState(0);
   const active = SKILLS[activeIdx];
+
+  const col0 = SKILLS.filter((_, i) => i % 3 === 0);
+  const col1 = SKILLS.filter((_, i) => i % 3 === 1);
+  const col2 = SKILLS.filter((_, i) => i % 3 === 2);
+  const cols = [col0, col1, col2];
 
   return (
     <section className="section" id="skills" data-screen-label="Skills">
@@ -68,64 +76,74 @@ export function Skills() {
         </div>
 
         <div className="sk-showcase reveal">
-          {/* Left: category list */}
-          <div className="sk-list">
-            {SKILLS.map((s, i) => {
-              const isActive = i === activeIdx;
-              const isDimmed = !isActive;
-              return (
-                <button
-                  key={s.t}
-                  className={`sk-row${isActive ? " sk-row--active" : ""}${isDimmed ? " sk-row--dimmed" : ""}`}
-                  onMouseEnter={() => setActiveIdx(i)}
-                  onClick={() => setActiveIdx(i)}
-                >
-                  <span className="sk-pill" aria-hidden="true" />
-                  <span className="sk-cat-icon">{icons[s.ic]}</span>
-                  <span className="sk-label">{s.t}</span>
-                  <span className="sk-count">{s.items.length}</span>
-                </button>
-              );
-            })}
+          {/* Left: scattered category cards in 3 staggered columns */}
+          <div className="sk-card-grid">
+            {cols.map((col, ci) => (
+              <div
+                key={ci}
+                className="sk-col"
+                style={{ marginTop: COL_OFFSETS[ci] }}
+              >
+                {col.map((s) => {
+                  const idx = SKILLS.indexOf(s);
+                  const isActive = idx === activeIdx;
+                  const isDimmed = !isActive;
+                  return (
+                    <button
+                      key={s.t}
+                      className={`sk-card${isActive ? " sk-card--active" : ""}${isDimmed ? " sk-card--dimmed" : ""}`}
+                      onMouseEnter={() => setActiveIdx(idx)}
+                      onClick={() => setActiveIdx(idx)}
+                    >
+                      <div className="sk-card-icon">{icons[s.ic]}</div>
+                      <p className="sk-card-name">{s.t}</p>
+                      <span className="sk-card-count">{s.items.length} skills</span>
+                    </button>
+                  );
+                })}
+              </div>
+            ))}
           </div>
 
-          {/* Right: items grid */}
+          {/* Right: items as a list */}
           <div className="sk-panel">
             <p className="sk-panel-heading">{active.t}</p>
             <AnimatePresence mode="wait">
-              <motion.div
+              <motion.ul
                 key={active.t}
-                className="sk-grid"
+                className="sk-list"
                 initial="hidden"
                 animate="show"
                 exit={{ opacity: 0, transition: { duration: 0.15 } }}
                 variants={{
                   hidden: {},
-                  show: { transition: { staggerChildren: 0.05 } },
+                  show: { transition: { staggerChildren: 0.06 } },
                 }}
               >
                 {active.items.map((item) => (
-                  <motion.div
+                  <motion.li
                     key={item}
-                    className="sk-tile"
+                    className="sk-item"
                     variants={{
-                      hidden: { opacity: 0, y: 16 },
-                      show:   { opacity: 1, y: 0, transition: { duration: 0.38, ease } },
+                      hidden: { opacity: 0, x: 12 },
+                      show:   { opacity: 1, x: 0, transition: { duration: 0.35, ease } },
                     }}
                   >
-                    <div className="sk-tile-logo">
+                    <span className="sk-item-indicator" />
+                    <div className="sk-item-logo">
                       <Image
                         src={LOGO_MAP[item] ?? "/logos/skills/spring.svg"}
                         alt={item}
-                        width={26}
-                        height={26}
-                        className="sk-tile-img"
+                        width={22}
+                        height={22}
+                        className="sk-item-img"
+                        unoptimized
                       />
                     </div>
-                    <span className="sk-tile-name">{item}</span>
-                  </motion.div>
+                    <span className="sk-item-name">{item}</span>
+                  </motion.li>
                 ))}
-              </motion.div>
+              </motion.ul>
             </AnimatePresence>
           </div>
         </div>
