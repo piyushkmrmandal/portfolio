@@ -365,7 +365,7 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: flex-start;
-  padding-left: 110px;
+  padding-left: 200px;
 }
 
 /* Left: 3-column staggered card grid */
