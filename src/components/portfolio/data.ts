@@ -4,9 +4,9 @@ export type Skill = { ic: string; t: string; items: string[] };
 export const SKILLS: Skill[] = [
   { ic: "code", t: "Languages & Core", items: ["Java 8 / 17 / 21", "J2EE", "Python", "JavaScript", "DSA", "SQL"] },
   { ic: "layers", t: "Frameworks", items: ["Spring Boot", "Spring Cloud", "Spring Data JPA", "Hibernate", "Spring MVC", "Thymeleaf"] },
-  { ic: "cloud", t: "Cloud & Platforms", items: ["AWS", "GCP", "OpenShift V4", "App Engine", "Docker", "Cloud SQL"] },
+  { ic: "cloud", t: "Cloud & Platforms", items: ["AWS", "GCP", "OpenShift V4", "Kubernetes", "Terraform", "App Engine", "Docker", "Cloud SQL"] },
   { ic: "api", t: "APIs & Messaging", items: ["REST / OAS", "Microservices", "Apache Kafka", "RabbitMQ", "OAuth", "Swagger"] },
-  { ic: "db", t: "Data Stores", items: ["MySQL", "Oracle", "MongoDB", "Couchbase"] },
+  { ic: "db", t: "Data Stores", items: ["PostgreSQL", "MySQL", "Oracle", "MongoDB", "Couchbase"] },
   { ic: "pipe", t: "DevOps & Observability", items: ["GitLab CI/CD", "Jenkins", "ELK", "Grafana", "AppDynamics", "JUnit · Mockito"] },
 ];
 
@@ -63,12 +63,13 @@ export const WORK: Work[] = [
 
 export type Experience = { when: string; co: string; role: string; via: string };
 export const XP: Experience[] = [
-  { when: "AUG 2025 — PRESENT", co: "EXL Services UK", role: "Lead Assistant Manager", via: "Client · Barclays USA — GFED, USCB Cards" },
-  { when: "JUN 2022 — JUN 2024", co: "EXL Services", role: "Senior Software Engineer", via: "Client · Barclays USA — OpenShift & CI/CD" },
-  { when: "JUL 2021 — MAY 2022", co: "Cognizant", role: "Associate Projects", via: "Google Trust & Safety Devshop" },
-  { when: "APR 2021 — JUL 2021", co: "Alten Calasoft Labs", role: "Java Developer", via: "Client · Anglo Gulf Trade Bank — Corporate Onboarding" },
-  { when: "OCT 2020 — APR 2021", co: "Infosys", role: "Senior Systems Engineer", via: "Client · American Express — TPDG" },
-  { when: "NOV 2017 — SEP 2020", co: "Infosys", role: "Systems Engineer", via: "The Hartford — Ability Advantage" },
+  { when: "AUG 2025 — PRESENT", co: "EXL Services UK", role: "Lead Assistant Manager — Lead Software Engineer", via: "Client · Barclays USA — GFED, USCB Cards" },
+  { when: "JUL 2024 — JUL 2025", co: "EXL Services", role: "Lead Assistant Manager — Lead Software Engineer", via: "Client · Barclays USA — GitLab CI/CD & Observability" },
+  { when: "JUN 2022 — JUN 2024", co: "EXL Services", role: "Assistant Manager — Senior Software Engineer", via: "Client · Barclays USA — OpenShift & CI/CD" },
+  { when: "JUL 2021 — JUN 2022", co: "Cognizant", role: "Associate Projects", via: "Google Trust & Safety Devshop" },
+  { when: "APR 2021 — JUL 2021", co: "ACL Digital", role: "Senior Software Engineer", via: "Client · Anglo Gulf Trade Bank — Corporate Onboarding" },
+  { when: "JAN 2020 — APR 2021", co: "Infosys", role: "Senior System Engineer", via: "Client · American Express — TPHG" },
+  { when: "NOV 2017 — JAN 2020", co: "Infosys", role: "System Engineer", via: "The Hartford — Ability Advantage" },
 ];
 
 export type Testimonial = { q: string; n: string; r: string; grad: string; img: string };
@@ -122,4 +123,17 @@ export const AWARDS: Award[] = [
   { year: "2020", t: "Insta Award", by: "Infosys Limited", d: "Recognised for outstanding contribution and delivery excellence on enterprise engagements." },
   { year: "2023", t: "Emerging Talent at EXL", by: "EXL", d: "Awarded for fast impact and technical leadership as a rising engineer within the organisation." },
   { year: "2025", t: "Analytics Oscar Award", by: "EXL · Northampton", d: "Honoured for excellence in engineering and data-driven delivery on the Barclays programme." },
+];
+
+export type Recognition = { t: string; by?: string };
+export const HONORS: Recognition[] = [
+  { t: "Stellar Performer Award — Data Management", by: "EXL" },
+];
+
+export const CERTS: Recognition[] = [
+  { t: "Introduction to Model Context Protocol" },
+  { t: "Agentic AI in Action: Tool Use with LangChain" },
+  { t: "Modern Java — Learn Java 8 Features By Coding It" },
+  { t: "Claude 101" },
+  { t: "Inside Agentic AI: Popular Frameworks" },
 ];

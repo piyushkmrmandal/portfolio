@@ -18,7 +18,7 @@ export function Experience() {
           <h2 className="section-title">Eight years, five global enterprises</h2>
           <p>
             A path from systems engineer to engineering lead across Infosys,
-            Alten Calasoft, Cognizant and EXL.
+            ACL Digital, Cognizant and EXL.
           </p>
         </div>
 

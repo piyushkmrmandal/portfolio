@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { AWARDS } from "./data";
+import { AWARDS, HONORS, CERTS } from "./data";
 import { icons } from "./icons";
 
 export function Awards() {
@@ -76,6 +76,31 @@ export function Awards() {
                 </motion.div>
               );
             })}
+          </div>
+
+          <div className="recognition-lists reveal">
+            <div className="recognition-col">
+              <h3 className="recognition-h">Honours</h3>
+              <ul className="recognition-list">
+                {HONORS.map((h) => (
+                  <li key={h.t}>
+                    <span className="rl-t">{h.t}</span>
+                    {h.by && <span className="rl-by">{h.by}</span>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="recognition-col">
+              <h3 className="recognition-h">Certifications</h3>
+              <ul className="recognition-list">
+                {CERTS.map((c) => (
+                  <li key={c.t}>
+                    <span className="rl-t">{c.t}</span>
+                    {c.by && <span className="rl-by">{c.by}</span>}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

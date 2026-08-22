@@ -449,11 +449,12 @@ body.reveal-safe .hero-marquee.from-right { opacity: 1 !important; transform: no
 .sk-item-name { font-size: 15.5px; font-weight: 600; color: var(--ink); }
 
 @media (max-width: 1100px) {
-  .sk-showcase { grid-template-columns: 1fr; gap: 32px; }
-  .sk-card-grid { padding-bottom: 0; }
+  .sk-showcase { grid-template-columns: 1fr; gap: 32px; padding-left: 0; }
+  .sk-card-grid { padding-bottom: 0; flex-wrap: wrap; justify-content: flex-start; }
 }
 @media (max-width: 600px) {
   .sk-card-grid { gap: 8px; }
+  .sk-col { width: 100%; }
   .sk-card { padding: 14px 12px; }
   .sk-card-count { display: none; }
 }
@@ -616,6 +617,17 @@ body.reveal-safe .award-card.reveal.in { transform: none !important; }
 .award-card.alt p { color: rgba(255,255,255,0.82); }
 .award-card.alt .trophy { background: rgba(255,255,255,0.14); color: #fff; }
 
+.recognition-lists { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px; }
+.recognition-h { font-size: 14px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 16px; }
+.recognition-list { display: flex; flex-direction: column; gap: 12px; }
+.recognition-list li { display: flex; flex-direction: column; gap: 2px; padding: 14px 18px; background: var(--surface); border-radius: var(--r-md); box-shadow: var(--sh-md); }
+.recognition-list .rl-t { font-size: 14.5px; font-weight: 600; color: var(--ink); }
+.recognition-list .rl-by { font-size: 13px; color: var(--accent); font-weight: 600; }
+
+@media (max-width: 680px) {
+  .recognition-lists { grid-template-columns: 1fr; gap: 24px; }
+}
+
 /* ============ CONTACT / CTA ============ */
 #contact { text-align: center; }
 .cta-box { background: linear-gradient(155deg, var(--blue), var(--navy)); border-radius: clamp(28px, 4vw, 48px); padding: clamp(50px, 8vw, 96px) var(--pad); position: relative; overflow: hidden; color: #fff; }
@@ -698,10 +710,12 @@ footer { padding: 40px 0 30px; }
   .hero-portrait-col { order: -1; }
   .hero-portrait { max-width: min(260px, 68vw); }
 }
-@media (max-width: 680px) {
+@media (max-width: 1024px) {
   .nav-links { display: none; }
   .nav-burger { display: flex; }
   #nav { padding: 8px 8px 8px 16px; }
+}
+@media (max-width: 680px) {
   .hero-stat { display: none; }
   .awards-grid, .about-grid { grid-template-columns: 1fr; }
   .hero-title { margin-top: 0; text-align: center; }

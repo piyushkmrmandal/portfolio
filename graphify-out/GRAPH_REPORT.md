@@ -1,16 +1,16 @@
-# Graph Report - portfolio  (2026-06-21)
+# Graph Report - portfolio  (2026-08-22)
 
 ## Corpus Check
-- 70 files · ~361,222 words
+- 78 files · ~376,881 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 481 nodes · 539 edges · 50 communities (35 shown, 15 thin omitted)
+- 641 nodes · 705 edges · 66 communities (50 shown, 16 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `03cebd71`
+- Built from commit: `bee1cb55`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -65,18 +65,34 @@
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 16 edges
 2. `cn()` - 15 edges
 3. `UI/UX Pro Max - Design Intelligence` - 13 edges
 4. `DesignSystemGenerator` - 11 edges
-5. `Piyush Kumar Mandal — Portfolio` - 10 edges
-6. `Quick Reference` - 9 edges
-7. `_search_csv()` - 8 edges
-8. `generate_design_system()` - 7 edges
-9. `BM25` - 7 edges
-10. `search()` - 7 edges
+5. `workers` - 10 edges
+6. `config` - 10 edges
+7. `Piyush Kumar Mandal — Portfolio` - 10 edges
+8. `Quick Reference` - 9 edges
+9. `manifest` - 8 edges
+10. `_search_csv()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `cn()` --calls--> `clsx`  [INFERRED]
@@ -85,32 +101,32 @@
   .claude/skills/ui-ux-pro-max/scripts/design_system.py → .claude/skills/ui-ux-pro-max/scripts/core.py
 - `AnimatedGridPattern()` --calls--> `cn()`  [EXTRACTED]
   src/components/ui/animated-grid-pattern.tsx → src/lib/utils.ts
+- `Button()` --calls--> `cn()`  [EXTRACTED]
+  src/components/ui/button.tsx → src/lib/utils.ts
 - `ShineBorder()` --calls--> `cn()`  [EXTRACTED]
   src/components/ui/shine-border.tsx → src/lib/utils.ts
-- `Badge()` --calls--> `cn()`  [EXTRACTED]
-  src/components/ui/badge.tsx → src/lib/utils.ts
 
-## Communities (50 total, 15 thin omitted)
+## Communities (66 total, 16 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.22
-Nodes (7): Awards(), hoverAnim, hoverTransition, AWARDS, SKILLS, icons, Skills()
+Cohesion: 0.25
+Nodes (6): SKILLS, icons, COL_OFFSETS, ease, LOGO_MAP, Skills()
 
 ### Community 1 - "Community 1"
-Cohesion: 0.06
-Nodes (35): 1. Accessibility (CRITICAL), 2. Touch & Interaction (CRITICAL), 3. Performance (HIGH), 4. Layout & Responsive (HIGH), 5. Typography & Color (MEDIUM), 6. Animation (MEDIUM), 7. Style Selection (MEDIUM), 8. Charts & Data (LOW) (+27 more)
+Cohesion: 0.05
+Nodes (43): 1. Accessibility (CRITICAL), 2. Touch & Interaction (CRITICAL), 3. Performance (HIGH), 4. Layout & Responsive (HIGH), 5. Typography & Color (MEDIUM), 6. Animation (MEDIUM), 7. Style Selection (MEDIUM), 8. Charts & Data (LOW) (+35 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.09
 Nodes (25): DesignSystemGenerator, _detect_page_type(), format_ascii_box(), format_markdown(), format_master_md(), format_page_override_md(), generate_design_system(), _generate_intelligent_overrides() (+17 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.10
-Nodes (22): Hero(), COMPANIES, Company, HeroMarquee(), TRACK, DEMO_PROJECTS, DemoProject, Project (+14 more)
+Cohesion: 0.06
+Nodes (33): ArchitectureFlow(), IconCmp, Pt, STAGE_ICON, Hero(), COMPANIES, Company, HeroMarquee() (+25 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.06
-Nodes (32): dependencies, class-variance-authority, embla-carousel-auto-scroll, embla-carousel-react, framer-motion, gsap, lenis, lucide-react (+24 more)
+Cohesion: 0.08
+Nodes (25): dependencies, class-variance-authority, embla-carousel-auto-scroll, embla-carousel-react, framer-motion, gsap, lenis, lucide-react (+17 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.09
@@ -125,8 +141,8 @@ Cohesion: 0.15
 Nodes (15): BM25, detect_domain(), _load_csv(), Lowercase, split, remove punctuation, filter short words, Build BM25 index from documents, Score all documents against query, Load CSV and return list of dicts, Core search function using BM25 (+7 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.15
-Nodes (9): Contact(), FolioRuntime(), Footer(), ease, HowIWork(), STEPS, Nav(), PROJECTS (+1 more)
+Cohesion: 0.14
+Nodes (11): AI_TOOLS, AICapabilities(), MARQUEE_ITEMS, FolioRuntime(), Footer(), ease, HowIWork(), STEPS (+3 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.17
@@ -141,8 +157,8 @@ Cohesion: 0.20
 Nodes (9): Approved Patterns, Buttons, Cards, Empty States, Forms, Hero Sections, Navigation, Patterns to Avoid (+1 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.25
-Nodes (8): code:bash (python3 skills/ui-ux-pro-max/scripts/search.py "beauty spa w), code:bash (# Get UX guidelines for animation and accessibility), code:bash (python3 skills/ui-ux-pro-max/scripts/search.py "layout respo), Example Workflow, Step 1: Analyze Requirements, Step 2: Generate Design System (REQUIRED), Step 3: Supplement with Detailed Searches (as needed), Step 4: Stack Guidelines
+Cohesion: 0.07
+Nodes (29): adoptedAt, corpus, corpusHash, costPerTask, latencyP95, rollbackRate, championId, ruflo (+21 more)
 
 ### Community 13 - "Community 13"
 Cohesion: 0.29
@@ -196,6 +212,10 @@ Nodes (4): Design Rules, Motion, Portfolio Prompt, Structure
 Cohesion: 0.50
 Nodes (3): effortLevel, hooks, PreToolUse
 
+### Community 27 - "Community 27"
+Cohesion: 0.40
+Nodes (4): env, ANTHROPIC_BASE_URL, permissions, allow
+
 ### Community 41 - "Community 41"
 Cohesion: 0.33
 Nodes (3): DockItem, DockItemProps, dockItems
@@ -205,20 +225,16 @@ Cohesion: 0.40
 Nodes (3): GlowCardProps, glowColorMap, sizeMap
 
 ### Community 43 - "Community 43"
-Cohesion: 0.07
-Nodes (30): cn(), clsx, AnimatedGridPattern(), AnimatedGridPatternProps, Square, Badge(), BadgeProps, badgeVariants (+22 more)
-
-### Community 44 - "Community 44"
-Cohesion: 0.25
-Nodes (6): ArchitectureFlow(), IconCmp, Pt, STAGE_ICON, Work, Work()
+Cohesion: 0.08
+Nodes (28): cn(), clsx, AnimatedGridPattern(), AnimatedGridPatternProps, Square, Badge(), BadgeProps, badgeVariants (+20 more)
 
 ### Community 45 - "Community 45"
-Cohesion: 0.25
-Nodes (6): Award, Experience, Skill, Testimonial, TST, Testimonials()
+Cohesion: 0.19
+Nodes (11): Awards(), hoverAnim, hoverTransition, Award, AWARDS, CERTS, Experience, HONORS (+3 more)
 
 ### Community 46 - "Community 46"
-Cohesion: 0.22
-Nodes (9): devDependencies, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @types/node, @types/react, @types/react-dom (+1 more)
+Cohesion: 0.11
+Nodes (17): devDependencies, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @types/node, @types/react, @types/react-dom (+9 more)
 
 ### Community 47 - "Community 47"
 Cohesion: 0.29
@@ -232,25 +248,85 @@ Nodes (4): About(), ACCELERATE_ITEMS, BUILD_ITEMS, EXPERTISE_ITEMS
 Cohesion: 0.40
 Nodes (4): EASE, Intro(), NAME_WORDS, wordVariants
 
+### Community 50 - "Community 50"
+Cohesion: 0.17
+Nodes (12): config, autoStart, idleShutdownMs, logDir, maxConcurrent, resourceThresholds, stateFile, ttlMs (+4 more)
+
+### Community 51 - "Community 51"
+Cohesion: 0.17
+Nodes (11): appliedAt, championId, layer, params, alpha, bodyWeight, mmrLambda, subjectWeight (+3 more)
+
+### Community 52 - "Community 52"
+Cohesion: 0.39
+Nodes (6): BackendVisual(), du(), SaaSVisual(), SERVICES, WebAppVisual(), WebsiteVisual()
+
+### Community 53 - "Community 53"
+Cohesion: 0.29
+Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, audit
+
+### Community 54 - "Community 54"
+Cohesion: 0.29
+Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, backup
+
+### Community 55 - "Community 55"
+Cohesion: 0.29
+Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, consolidate
+
+### Community 56 - "Community 56"
+Cohesion: 0.29
+Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, harness
+
+### Community 57 - "Community 57"
+Cohesion: 0.29
+Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, map
+
+### Community 58 - "Community 58"
+Cohesion: 0.29
+Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, optimize
+
+### Community 59 - "Community 59"
+Cohesion: 0.29
+Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, testgaps
+
+### Community 60 - "Community 60"
+Cohesion: 0.33
+Nodes (6): averageDurationMs, failureCount, isRunning, runCount, successCount, document
+
+### Community 61 - "Community 61"
+Cohesion: 0.33
+Nodes (6): averageDurationMs, failureCount, isRunning, runCount, successCount, predict
+
+### Community 62 - "Community 62"
+Cohesion: 0.40
+Nodes (3): Contact(), ProfileCard(), ProfileCardProps
+
+### Community 63 - "Community 63"
+Cohesion: 0.40
+Nodes (4): running, savedAt, startedAt, workers
+
+### Community 64 - "Community 64"
+Cohesion: 0.40
+Nodes (4): lastAdaptation, patternsLearned, signalsProcessed, trajectoriesRecorded
+
 ## Knowledge Gaps
-- **261 isolated node(s):** `setup.sh script`, `config`, `name`, `version`, `private` (+256 more)
+- **375 isolated node(s):** `setup.sh script`, `config`, `name`, `version`, `private` (+370 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `Community 43` to `Community 3`?**
-  _High betweenness centrality (0.071) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `Community 4` to `Community 43`?**
-  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `Community 4` to `Community 43`, `Community 46`?**
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Why does `clsx` connect `Community 43` to `Community 4`?**
-  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **What connects `setup.sh script`, `config`, `name` to the rest of the system?**
-  _287 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _401 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.0855614973262032 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.056429232192414434 - nodes in this community are weakly interconnected._
