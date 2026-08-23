@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import type { PointerEvent } from "react";
+import { experienceYears } from "./data";
 
 const BUILD_ITEMS = [
   "Enterprise Apps",
@@ -57,7 +58,7 @@ export function About() {
             I architect <span style={{ color: "var(--accent)" }}>resilient cloud-native</span> platforms that scale globally and deliver measurable business impact.
           </h2>
           <p className="about-support reveal d2">
-            With eight years of experience building distributed systems across banking and technology domains, I help organizations transform complex engineering challenges into scalable products, intelligent platforms, and high-performing technology ecosystems.
+            With {experienceYears()}+ years of experience building distributed systems across banking and technology domains, I help organizations transform complex engineering challenges into scalable products, intelligent platforms, and high-performing technology ecosystems.
           </p>
           <div className="reveal d3">
             <a href="#contact" className="btn btn-dark">

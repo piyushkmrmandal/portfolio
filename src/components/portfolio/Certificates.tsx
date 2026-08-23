@@ -163,9 +163,14 @@ export function Certificates() {
 
   const active = CERTS.find((c) => c.id === activeId) ?? null;
 
-  const handleToggle = (id: number) => {
-    setActiveId((prev) => (prev === id ? null : id));
-    setAutoRotate((prev) => (activeId === id ? true : false));
+  const handlePreview = (id: number) => {
+    setActiveId(id);
+    setAutoRotate(false);
+  };
+
+  const clearPreview = () => {
+    setActiveId(null);
+    setAutoRotate(true);
   };
 
   return (
@@ -224,9 +229,14 @@ export function Certificates() {
           position: absolute;
           top: 50%;
           left: 50%;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          font: inherit;
           transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
           cursor: pointer;
         }
+        .cert-node:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; border-radius: var(--r-sm); }
         .cert-node-dot {
           width: 40px;
           height: 40px;
@@ -449,7 +459,13 @@ export function Certificates() {
         </div>
 
         <div className="cert-card wrap">
-          <div className="cert-inner">
+          <div
+            className="cert-inner"
+            onMouseLeave={clearPreview}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) clearPreview();
+            }}
+          >
             <div className="cert-orbit-wrap" ref={containerRef}>
               <div className="cert-ring" />
               <div className="cert-orbit-core">
@@ -463,21 +479,25 @@ export function Certificates() {
                 const isActive = activeId === c.id;
                 const Icon = c.icon;
                 return (
-                  <div
+                  <button
+                    type="button"
                     key={c.id}
                     className={`cert-node${isActive ? " active" : ""}`}
+                    aria-label={`Preview ${c.title}`}
+                    aria-expanded={isActive}
                     style={{
                       transform: `translate(${x}px, ${y}px)`,
                       opacity: activeId && !isActive ? 0.45 : 1,
                       zIndex: isActive ? 20 : 10,
                     }}
-                    onClick={() => handleToggle(c.id)}
+                    onMouseEnter={() => handlePreview(c.id)}
+                    onFocus={() => handlePreview(c.id)}
                   >
                     <div className="cert-node-dot">
                       <Icon size={17} />
                     </div>
                     <div className="cert-node-label">{c.title}</div>
-                  </div>
+                  </button>
                 );
               })}
             </div>

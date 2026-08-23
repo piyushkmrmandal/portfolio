@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SKILLS } from "./data";
+import { SKILLS, experienceYears } from "./data";
 import { icons } from "./icons";
 import Image from "next/image";
 
@@ -72,7 +72,7 @@ export function Skills() {
           </div>
           <h2 className="section-title">The engineering toolkit</h2>
           <p>
-            Eight years of Java &amp; Spring microservices, cloud-native
+            {experienceYears()}+ years of Java &amp; Spring microservices, cloud-native
             platforms and delivery automation — the stack behind
             mission-critical systems.
           </p>

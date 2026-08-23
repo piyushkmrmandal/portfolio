@@ -1,5 +1,17 @@
 /* Content data ported verbatim from the design's folio.js */
 
+const CAREER_START = new Date(2017, 10, 6); // 6 Nov 2017
+
+export function experienceYears(): number {
+  const now = new Date();
+  let years = now.getFullYear() - CAREER_START.getFullYear();
+  const hadAnniversary =
+    now.getMonth() > CAREER_START.getMonth() ||
+    (now.getMonth() === CAREER_START.getMonth() && now.getDate() >= CAREER_START.getDate());
+  if (!hadAnniversary) years -= 1;
+  return years;
+}
+
 export type Skill = { ic: string; t: string; items: string[] };
 export const SKILLS: Skill[] = [
   { ic: "code", t: "Languages & Core", items: ["Java 8 / 17 / 21", "J2EE", "Python", "JavaScript", "DSA", "SQL"] },

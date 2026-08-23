@@ -10,7 +10,7 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/package.json": {
-    "mtime": 1782071122.3245955,
+    "mtime": 1787505379.6472917,
     "ast_hash": "ae9dea19a4e92413020eda028c8003ce",
     "semantic_hash": ""
   },
@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/.claude/settings.local.json": {
-    "mtime": 1787503533.137177,
-    "ast_hash": "3a09d4245ab3670e3a894f1fcb8c52fc",
+    "mtime": 1787522585.7834737,
+    "ast_hash": "bf3f378308e1ac063197fde5aac9a74c",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/.claude/skills/ui-ux-pro-max/scripts/design_system.py": {
@@ -65,7 +65,7 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/app/page.tsx": {
-    "mtime": 1787504072.383043,
+    "mtime": 1787505379.695063,
     "ast_hash": "bf127f776d158ff604e13de1bc0dc90e",
     "semantic_hash": ""
   },
@@ -90,22 +90,22 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Nav.tsx": {
-    "mtime": 1782066461.4715853,
+    "mtime": 1787505379.7037814,
     "ast_hash": "fbb5ecc140cc0c2fbd3befddba5667de",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Experience.tsx": {
-    "mtime": 1787420672.0166314,
-    "ast_hash": "5bf9ab1be3dfcc839594dfac3439e73a",
+    "mtime": 1787523273.6391985,
+    "ast_hash": "a25396460856d289f92229e47b0afb69",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/data.ts": {
-    "mtime": 1787425899.9651403,
-    "ast_hash": "ecbb01ad683f5e53bd450ca227d5b23c",
+    "mtime": 1787523250.5200624,
+    "ast_hash": "dd70408a21676e3259095d1647efa03d",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Awards.tsx": {
-    "mtime": 1787425894.0272746,
+    "mtime": 1787505379.6965315,
     "ast_hash": "df799603057c5b2c006efc9f58fd6353",
     "semantic_hash": ""
   },
@@ -115,7 +115,7 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Contact.tsx": {
-    "mtime": 1782244137.870127,
+    "mtime": 1787505379.697828,
     "ast_hash": "10b672fb9e41aa93476e440df712aaa7",
     "semantic_hash": ""
   },
@@ -130,12 +130,12 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/HeroMarquee.tsx": {
-    "mtime": 1787426805.4505444,
+    "mtime": 1787505379.6988816,
     "ast_hash": "469e79c61ebad5a2424167bedd89874b",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/FolioRuntime.tsx": {
-    "mtime": 1787424969.4821806,
+    "mtime": 1787505379.6985574,
     "ast_hash": "1f2e573e785ffb8f991955502b5494aa",
     "semantic_hash": ""
   },
@@ -145,13 +145,13 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Skills.tsx": {
-    "mtime": 1787420577.5465615,
-    "ast_hash": "7dd22af18a1d310841617e5c33401788",
+    "mtime": 1787523316.4939797,
+    "ast_hash": "3bff4038f1e40aa8caca41c7146d1a4c",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/About.tsx": {
-    "mtime": 1787420688.2128358,
-    "ast_hash": "ed78eaf9942c9c393715997be0b85c9a",
+    "mtime": 1787523296.465559,
+    "ast_hash": "3997b0b39a1298969465367ee5862b35",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/lib/utils.ts": {
@@ -275,7 +275,7 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/resume.pdf": {
-    "mtime": 1787439356.6296172,
+    "mtime": 1787505379.6900172,
     "ast_hash": "e5ecab7ebae21887cbbdf42edca5f757",
     "semantic_hash": ""
   },
@@ -390,7 +390,7 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Projects.tsx": {
-    "mtime": 1782075800.1379101,
+    "mtime": 1787505379.7055395,
     "ast_hash": "264d444a4d8ba13059c24725ca3cb31b",
     "semantic_hash": ""
   },
@@ -435,12 +435,12 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/HowIWork.tsx": {
-    "mtime": 1782248543.4349658,
+    "mtime": 1787505379.7021296,
     "ast_hash": "c116dec227ba9102b1fba83798b06a3c",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Services.tsx": {
-    "mtime": 1787425498.5576003,
+    "mtime": 1787505379.7065969,
     "ast_hash": "1037cfa0c25fa0339bd3edff3ca5aa58",
     "semantic_hash": ""
   },
@@ -475,18 +475,18 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/ui/card-carousel.tsx": {
-    "mtime": 1782242088.303185,
+    "mtime": 1787505379.7077768,
     "ast_hash": "a54f1719e17477fb991e673224237f03",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/ui/profile-card.tsx": {
-    "mtime": 1782248543.4353185,
+    "mtime": 1787505379.7080507,
     "ast_hash": "3ebc9c74eeb989c1ee953f69aa087945",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/AICapabilities.tsx": {
-    "mtime": 1782073511.7740276,
-    "ast_hash": "c4140686114a0050579e3383f11ad9ef",
+    "mtime": 1787523247.360482,
+    "ast_hash": "b7888b51d834f0f5a499a14cad0381b9",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/.serena/project.yml": {
@@ -499,213 +499,203 @@
     "ast_hash": "f136e7d47205d9a758913615074760e5",
     "semantic_hash": ""
   },
-  "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/openclaw.png": {
-    "mtime": 1782073494.6714754,
-    "ast_hash": "add525da886a7b8a0575334aabbb4bee",
-    "semantic_hash": ""
-  },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/multi-ai.svg": {
-    "mtime": 1782072828.2603567,
+    "mtime": 1787505379.6626246,
     "ast_hash": "7892fd577b0b8d2348d5b9a25b9f3840",
     "semantic_hash": ""
   },
-  "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/higgsfield.png": {
-    "mtime": 1782072762.1280408,
-    "ast_hash": "bd52d75af5faf477f70022b066ab9f4a",
-    "semantic_hash": ""
-  },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/n8n.svg": {
-    "mtime": 1782072674.1374345,
+    "mtime": 1787505379.66281,
     "ast_hash": "3f0766d288b36c2c9edf21a7bf9d2adc",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/gitlab-duo.svg": {
-    "mtime": 1782073485.0287638,
+    "mtime": 1787505379.6620028,
     "ast_hash": "d6e7e2d8d9615ba47f2acbb8e8daf8ba",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/numerous-ai.png": {
-    "mtime": 1782072732.1393049,
+    "mtime": 1787505379.6634195,
     "ast_hash": "6101bbc0986c2ef8ec40ff1bf33ff80a",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/claude-code.svg": {
-    "mtime": 1782072671.511948,
+    "mtime": 1787505379.6542156,
     "ast_hash": "ba3c0f93b9c27031b17f15bed2b9f8b5",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/microsoft-copilot.svg": {
-    "mtime": 1782072840.1195114,
-    "ast_hash": "41eabf34d65b0df2d5b2e8d3f17a6721",
+    "mtime": 1787519888.7562761,
+    "ast_hash": "07b0224e6cdb695b53cb10ddcfd6f662",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/github-copilot.png": {
-    "mtime": 1782072585.7511718,
+    "mtime": 1787505379.6582224,
     "ast_hash": "687668c6894661c53aeeff34a023f217",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/github-copilot.svg": {
-    "mtime": 1782072673.9998233,
+    "mtime": 1787505379.660528,
     "ast_hash": "3b32de03ab1da74c6e7d62175999fbee",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/gitlab-duo.png": {
-    "mtime": 1782073289.8703446,
+    "mtime": 1787505379.6613152,
     "ast_hash": "d51ebb5b1eec689104baad62481e63cb",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/spring.svg": {
-    "mtime": 1782245450.9238565,
+    "mtime": 1787505379.6770427,
     "ast_hash": "c44826d4cc92fce68cb32c48fa3df65f",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/javascript.svg": {
-    "mtime": 1782245450.9652658,
+    "mtime": 1787505379.673736,
     "ast_hash": "5fdb9a35d5e29c31518acb0590f726cd",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/gitlab.svg": {
-    "mtime": 1782245451.2797155,
+    "mtime": 1787505379.6726005,
     "ast_hash": "d6e7e2d8d9615ba47f2acbb8e8daf8ba",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/aws.svg": {
-    "mtime": 1782245826.401447,
+    "mtime": 1787505379.6706526,
     "ast_hash": "6a93a47771c54412b200c910a41403a5",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/java.svg": {
-    "mtime": 1782245826.3996363,
+    "mtime": 1787505379.673558,
     "ast_hash": "8c1f49917a4202f541746b87e5f848e2",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/gcp.svg": {
-    "mtime": 1782245450.9238808,
+    "mtime": 1787505379.6724875,
     "ast_hash": "5215772e7a65e35654b1194756222a18",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/oracle.svg": {
-    "mtime": 1782245826.4033327,
+    "mtime": 1787505379.6751645,
     "ast_hash": "6e358960779d0835911302eb86d9e8f8",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/thymeleaf.svg": {
-    "mtime": 1782245451.019964,
+    "mtime": 1787505379.6780498,
     "ast_hash": "3ead5f49a1a4757bb7e13556b8d9e7ca",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/python.svg": {
-    "mtime": 1782245450.9338326,
+    "mtime": 1787505379.675717,
     "ast_hash": "95df9761f0f0076e6b350183fc291723",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/docker.svg": {
-    "mtime": 1782245450.9339833,
+    "mtime": 1787505379.671969,
     "ast_hash": "653060abc63da74fdfce2d7254a64cf8",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/kubernetes.svg": {
-    "mtime": 1787420541.5477662,
+    "mtime": 1787505379.6743884,
     "ast_hash": "6d7ca10a9229ca4e4f2c56607cd2003d",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/elasticsearch.svg": {
-    "mtime": 1782245451.2838242,
+    "mtime": 1787505379.6722484,
     "ast_hash": "9eee960d0d4bd2dde58bb46e5bea4d09",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/hibernate.svg": {
-    "mtime": 1782245451.009256,
+    "mtime": 1787505379.6731007,
     "ast_hash": "e0cc25394fbe577c78b7066d609916df",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/terraform.svg": {
-    "mtime": 1787420541.550006,
+    "mtime": 1787505379.6778889,
     "ast_hash": "f551b87ad9038b651b46d17a51905af6",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/openshift.svg": {
-    "mtime": 1782245450.975456,
+    "mtime": 1787505379.6750417,
     "ast_hash": "e81052b72c6991f0f131d53a8492fa3b",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/swagger.svg": {
-    "mtime": 1782245451.2696228,
+    "mtime": 1787505379.6775048,
     "ast_hash": "ff94340e95afa3e7fcbad95373994593",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/rabbitmq.svg": {
-    "mtime": 1782245451.2798421,
+    "mtime": 1787505379.676104,
     "ast_hash": "f41d94f49451c43df82383c1786e0456",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/mongodb.svg": {
-    "mtime": 1782245451.2742271,
+    "mtime": 1787505379.6745899,
     "ast_hash": "bea671778332dd2dfd2eff4305295439",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/junit.svg": {
-    "mtime": 1782245451.4965177,
+    "mtime": 1787505379.6740503,
     "ast_hash": "c20b932d0ea90585d1cfa6ed314891df",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/appdynamics.svg": {
-    "mtime": 1782245826.4052117,
+    "mtime": 1787505379.6658077,
     "ast_hash": "8280d15bfa338fbe431b2532c96de890",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/openapi.svg": {
-    "mtime": 1782245451.2745867,
+    "mtime": 1787505379.6748965,
     "ast_hash": "43c17e05f91cf5b0014cfbf4a9d6d3ac",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/jenkins.svg": {
-    "mtime": 1782245451.2795386,
+    "mtime": 1787505379.6739347,
     "ast_hash": "801b5ceb1a1056510ee8dbb822d8b03d",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/kafka.svg": {
-    "mtime": 1782245451.2797387,
+    "mtime": 1787505379.6741705,
     "ast_hash": "6199a7374eff68b62d4cf8450e13214e",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/couchbase.svg": {
-    "mtime": 1782245451.2798433,
+    "mtime": 1787505379.6709383,
     "ast_hash": "2c458788f10f50c6b2b36d9b4999e353",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/mysql.svg": {
-    "mtime": 1782245451.2795417,
+    "mtime": 1787505379.6747205,
     "ast_hash": "7aeaa746ad23a0a0c3bf7593f9378960",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/grafana.svg": {
-    "mtime": 1782245451.474129,
+    "mtime": 1787505379.672807,
     "ast_hash": "c50c0339b0399f76fd558195366c1259",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/logos/skills/postgresql.svg": {
-    "mtime": 1787420541.5521917,
+    "mtime": 1787505379.6754112,
     "ast_hash": "ed9ed79d3ccb6257e38ce824f2523725",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/videos/brewery.mp4": {
-    "mtime": 1782076308.3398855,
+    "mtime": 1787505379.6947138,
     "ast_hash": "d76457aa4b0d7744c3b924101a14089e",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/awards/analytics-oscar.png": {
-    "mtime": 1787424092.0564992,
+    "mtime": 1787505379.6789007,
     "ast_hash": "e3f37cfa353a707a5f6f97618742e0d8",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/awards/stellar-performer.png": {
-    "mtime": 1787424092.0610764,
+    "mtime": 1787505379.6797068,
     "ast_hash": "f6a061c81f4f33cff98b637f94bc7fab",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/awards/emerging-talent.png": {
-    "mtime": 1787424092.0588713,
+    "mtime": 1787505379.6794071,
     "ast_hash": "327b95ba11951b27a81e871a16ffe2e7",
     "semantic_hash": ""
   },
@@ -745,93 +735,103 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Certificates.tsx": {
-    "mtime": 1787501337.3435547,
-    "ast_hash": "ec20995db8b10d7b966f49c23aa822bc",
+    "mtime": 1787522692.846502,
+    "ast_hash": "ef0f42911981fd5e7e5c79d41d27d196",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-mcp.pdf": {
-    "mtime": 1787490988.6449802,
+    "mtime": 1787505379.6815467,
     "ast_hash": "a0bbf30ba27663d7126be7f2925aeb47",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-claude-101.pdf": {
-    "mtime": 1787490988.6474223,
+    "mtime": 1787505379.680535,
     "ast_hash": "0af98959f2c4409120d64568ae737428",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-subagents.pdf": {
-    "mtime": 1787490988.6427624,
+    "mtime": 1787505379.6820834,
     "ast_hash": "e8d37e549432b3996dcb48680dbf8f13",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-claude-code-in-action.pdf": {
-    "mtime": 1787490988.6495059,
+    "mtime": 1787505379.681001,
     "ast_hash": "6799e52bf790738eab21c2cc138d6887",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-agent-skills.pdf": {
-    "mtime": 1787490988.6516223,
+    "mtime": 1787505379.6802106,
     "ast_hash": "60a5f7fcae191eed3ffec84753cb3b01",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/logos/skillsoft.png": {
-    "mtime": 1787493454.5354013,
+    "mtime": 1787505379.6897075,
     "ast_hash": "e06f2319dfdfda0463b0ff8905f29911",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/logos/anthropic.svg": {
-    "mtime": 1787493356.4340873,
+    "mtime": 1787505379.6893492,
     "ast_hash": "ba3c0f93b9c27031b17f15bed2b9f8b5",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-mcp.png": {
-    "mtime": 1787493316.2414458,
+    "mtime": 1787505379.6858275,
     "ast_hash": "756affd84f4f6e1986a40bfdb3cd6e92",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-claude-101.png": {
-    "mtime": 1787493315.8128877,
+    "mtime": 1787505379.6834424,
     "ast_hash": "ed9832bd54096b26d9e1a55fd92b0c58",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-agent-skills.png": {
-    "mtime": 1787493315.6080241,
+    "mtime": 1787505379.6826138,
     "ast_hash": "06faefb7e7bf23ae7e94f62d764167fe",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-claude-code-in-action.png": {
-    "mtime": 1787493316.0131233,
+    "mtime": 1787505379.684476,
     "ast_hash": "84ac557aed436ada7dc49b56d37aa6be",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-subagents.png": {
-    "mtime": 1787493316.4480934,
+    "mtime": 1787505379.6866388,
     "ast_hash": "cdc57163b135e6a34809b0887b841f7b",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-tooluse-langchain.png": {
-    "mtime": 1787494716.945756,
+    "mtime": 1787505379.6892202,
     "ast_hash": "3e1fe3cd5698c22c0858ca799ed98103",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-inside-agentic-ai.png": {
-    "mtime": 1787494716.94938,
+    "mtime": 1787505379.6882877,
     "ast_hash": "f8c4233493c0a6f22c49aa18425fd4b6",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-llm-deployment.png": {
-    "mtime": 1787494716.9336774,
+    "mtime": 1787505379.6887171,
     "ast_hash": "fddcd133d37a4b6fdab4413d2cc81fad",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-handson-langchain.png": {
-    "mtime": 1787494716.942325,
+    "mtime": 1787505379.6876457,
     "ast_hash": "b229e9eed2db5063d1204848d36a491c",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-rag-langchain.png": {
-    "mtime": 1787494716.938584,
+    "mtime": 1787505379.6889708,
     "ast_hash": "741f973c4b49312b0dbe10832c571295",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/higgsfield-ai.svg": {
+    "mtime": 1787519888.7587426,
+    "ast_hash": "14810192c487a4df955a08f3398054c4",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/logos/ai/openclaw.png": {
+    "mtime": 1787520898.36023,
+    "ast_hash": "add525da886a7b8a0575334aabbb4bee",
     "semantic_hash": ""
   }
 }

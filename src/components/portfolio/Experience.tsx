@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ShineBorder } from "@/components/ui/shine-border";
-import { XP } from "./data";
+import { XP, experienceYears } from "./data";
 
 // Roadmap reads as a journey: oldest milestone first → current role last.
 const JOURNEY = [...XP].reverse();
@@ -15,7 +15,7 @@ export function Experience() {
       <div className="wrap">
         <div className="section-head reveal xp-head">
           <div className="eyebrow center">Career</div>
-          <h2 className="section-title">Eight years, five global enterprises</h2>
+          <h2 className="section-title">{experienceYears()}+ years, five global enterprises</h2>
           <p>
             A path from systems engineer to engineering lead across Infosys,
             ACL Digital, Cognizant and EXL.
