@@ -1,0 +1,458 @@
+/* ── Panel Row ── */
+.panelRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 400px;
+  align-items: stretch;
+}
+
+/* ── Individual Panel ── */
+.panel {
+  flex: 1;
+  min-width: 68px;
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  transition:
+    flex 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    background 0.5s ease,
+    box-shadow 0.4s ease;
+  outline: none;
+}
+
+.panel:focus-visible {
+  box-shadow: 0 0 0 3px rgba(42, 69, 214, 0.35);
+}
+
+.panel:hover:not(.panelActive) {
+  border-color: var(--line-2);
+  box-shadow: var(--sh-sm);
+}
+
+/* Active panel expands */
+.panelActive {
+  flex: 8;
+  border-color: var(--panel-border, var(--accent));
+  background: linear-gradient(
+    135deg,
+    var(--panel-bg-from, #f0f2ff) 0%,
+    var(--panel-bg-to, #e8ecff) 100%
+  );
+  box-shadow: var(--sh-md);
+  cursor: default;
+}
+
+/* ── Left strip (icon + rotated label) — always visible ── */
+.panelStrip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 68px;
+  min-width: 68px;
+  padding: 24px 0;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+}
+
+/* Dark blurred cover over the strip when panel is open */
+.panelActive .panelStrip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px 0 0 20px;
+  z-index: 10;
+  transition: opacity 0.35s ease;
+}
+
+.panelIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  transition: color 0.4s ease, background 0.4s ease;
+  flex-shrink: 0;
+}
+
+.panelActive .panelIconWrap {
+  background: color-mix(in oklch, var(--panel-accent, var(--accent)) 12%, white);
+}
+
+.panelLabelRotated {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  transition: color 0.4s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* ── Expanded area (text + visual) ── */
+.panelContent {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  opacity: 0;
+  transform: translateX(16px);
+  pointer-events: none;
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.08s,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.08s;
+}
+
+.panelActive .panelContent {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* ── Text column ── */
+.panelText {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 32px 4px;
+  width: 280px;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+.panelMeta {
+  margin-bottom: 14px;
+}
+
+.panelEyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.panelTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.panelDesc {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  flex: 1;
+  margin-bottom: 24px;
+  max-width: 38ch;
+}
+
+.panelFooter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.panelPrice {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  border: 1px solid;
+  padding: 5px 14px;
+  white-space: nowrap;
+}
+
+.panelCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 8px 8px 18px;
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+.panelCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.22);
+}
+
+.panelCtaIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  display: grid;
+  place-items: center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.panelCta:hover .panelCtaIcon {
+  transform: rotate(-45deg);
+}
+
+/* ── Visual column ── */
+.panelVisual {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px 20px 0;
+  min-width: 0;
+}
+
+/* ── Visual canvas (shared wrapper) ── */
+.visualCanvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+/* ── Browser mockup ── */
+.browser {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.browserChrome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: #f4f4f6;
+  border-bottom: 1px solid #e8e8ec;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+}
+
+.urlBar {
+  flex: 1;
+  background: white;
+  border: 1px solid #e4e4e8;
+  border-radius: 4px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.browserBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.bNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  flex-shrink: 0;
+}
+
+.bHero {
+  background: #f7f8ff;
+  border-radius: 7px;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.bCards {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+  min-height: 0;
+}
+
+.bCard {
+  flex: 1;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #eef0f8;
+  padding: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* ── Mobile preview (floats top-right) ── */
+.mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  background: white;
+  border-radius: 10px;
+  border: 1.5px solid;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* ── Dashboard ── */
+.dashFrame {
+  flex: 1;
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  min-height: 0;
+}
+
+.dashSidebar {
+  width: 44px;
+  background: #f9f9fb;
+  border-right: 1px solid;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.dashMain {
+  flex: 1;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ── Floating notification chip ── */
+.floatNotif {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+/* ── SVG flow diagram ── */
+.flowSvg {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Code chip ── */
+.codeChip {
+  background: #0f172a;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: "SF Mono", "Fira Code", monospace;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .panelRow {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .panel {
+    flex: none !important;
+    flex-direction: column;
+    min-width: unset;
+    width: 100%;
+    min-height: 380px;
+    cursor: default;
+  }
+
+  .panelActive {
+    min-height: 380px;
+  }
+
+  .panelStrip::after {
+    display: none;
+  }
+
+  .panelStrip {
+    flex-direction: row;
+    width: 100%;
+    min-width: unset;
+    height: 68px;
+    padding: 0 24px;
+    gap: 14px;
+  }
+
+  .panelLabelRotated {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .panelContent {
+    flex-direction: column;
+    transform: translateY(12px);
+  }
+
+  .panelActive .panelContent {
+    transform: translateY(0);
+  }
+
+  .panelText {
+    width: 100%;
+    min-width: unset;
+    padding: 0 24px 16px;
+  }
+
+  .panelVisual {
+    padding: 0 24px 24px;
+    height: 180px;
+    flex: none;
+  }
+}

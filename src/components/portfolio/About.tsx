@@ -57,7 +57,7 @@ export function About() {
             I architect <span style={{ color: "var(--accent)" }}>resilient cloud-native</span> platforms that scale globally and deliver measurable business impact.
           </h2>
           <p className="about-support reveal d2">
-            With nearly a decade of experience building distributed systems across banking and technology domains, I help organizations transform complex engineering challenges into scalable products, intelligent platforms, and high-performing technology ecosystems.
+            With eight years of experience building distributed systems across banking and technology domains, I help organizations transform complex engineering challenges into scalable products, intelligent platforms, and high-performing technology ecosystems.
           </p>
           <div className="reveal d3">
             <a href="#contact" className="btn btn-dark">

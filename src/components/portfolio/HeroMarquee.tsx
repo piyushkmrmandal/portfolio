@@ -11,8 +11,8 @@ const COMPANIES: Company[] = [
   { id: "barclays", name: "Barclays", logo: "/portfolio/logos/barclays.svg" },
   { id: "google", name: "Google", logo: "/portfolio/logos/google.svg" },
   { id: "amex", name: "American Express", logo: "/portfolio/logos/amex.png", logoClass: "rounded-[3px]" },
-  { id: "hartford", name: "The Hartford", logo: "/portfolio/logos/hartford.svg", logoClass: "!h-8" },
-  { id: "agtb", name: "Anglo Gulf Trade Bank", logo: "/portfolio/logos/agtb.png", logoClass: "!h-7" },
+  { id: "hartford", name: "The Hartford", logo: "/portfolio/logos/hartford.svg" },
+  { id: "agtb", name: "Anglo Gulf Trade Bank", logo: "/portfolio/logos/agtb.png" },
 ];
 
 // duplicated so the looped track always stays full
@@ -46,7 +46,6 @@ export function HeroMarquee() {
                     alt={`${c.name} logo`}
                     className={`hm-logo ${c.logoClass ?? ""}`}
                   />
-                  <span className="hm-name">{c.name}</span>
                 </div>
               </CarouselItem>
             ))}

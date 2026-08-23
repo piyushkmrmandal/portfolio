@@ -4,9 +4,9 @@ export type Skill = { ic: string; t: string; items: string[] };
 export const SKILLS: Skill[] = [
   { ic: "code", t: "Languages & Core", items: ["Java 8 / 17 / 21", "J2EE", "Python", "JavaScript", "DSA", "SQL"] },
   { ic: "layers", t: "Frameworks", items: ["Spring Boot", "Spring Cloud", "Spring Data JPA", "Hibernate", "Spring MVC", "Thymeleaf"] },
-  { ic: "cloud", t: "Cloud & Platforms", items: ["AWS", "GCP", "OpenShift V4", "App Engine", "Docker", "Cloud SQL"] },
+  { ic: "cloud", t: "Cloud & Platforms", items: ["AWS", "GCP", "OpenShift V4", "Kubernetes", "Terraform", "App Engine", "Docker", "Cloud SQL"] },
   { ic: "api", t: "APIs & Messaging", items: ["REST / OAS", "Microservices", "Apache Kafka", "RabbitMQ", "OAuth", "Swagger"] },
-  { ic: "db", t: "Data Stores", items: ["MySQL", "Oracle", "MongoDB", "Couchbase"] },
+  { ic: "db", t: "Data Stores", items: ["PostgreSQL", "MySQL", "Oracle", "MongoDB", "Couchbase"] },
   { ic: "pipe", t: "DevOps & Observability", items: ["GitLab CI/CD", "Jenkins", "ELK", "Grafana", "AppDynamics", "JUnit · Mockito"] },
 ];
 
@@ -22,9 +22,9 @@ export const WORK: Work[] = [
   {
     tag: "Barclays · USCB Cards",
     title: "Enterprise Credit Decisioning Platform",
-    desc: "RFT decides the credit issued to a card applicant — combining bureau data and fraud signals, then applying partner-specific strategies. I refactored the microservices and decisioning flows behind it.",
+    desc: "RFT decides the credit issued to a card applicant — combining bureau data and fraud signals, then applying partner-specific strategies. I refactored the microservices and decisioning flows, lifting daily throughput from 15K to 25–30K applications in production.",
     pills: ["Java", "Spring Boot", "REST", "Experian", "Microservices"],
-    metrics: [["Real-time", "Decisioning"], ["End-to-end", "USCB APIs"]],
+    metrics: [["15K → 30K", "Applications/day"], ["Real-time", "End-to-end"]],
     stages: ["Applicant", "Decision", "Bureau", "Fraud", "Response"],
   },
   {
@@ -32,7 +32,7 @@ export const WORK: Work[] = [
     title: "Cloud-Native Migration to OpenShift V4",
     desc: "Re-platformed a legacy application onto the OpenShift V4 template — highly available, fault-tolerant and auto-scalable — introducing OAuth as part of the transition.",
     pills: ["OpenShift V4", "AWS", "Docker", "OAuth"],
-    metrics: [["24/7", "Availability"], ["Auto-scale", "Elastic"]],
+    metrics: [["45 TPS", "Zero Downtime"], ["24/7", "Auto-scale"]],
     stages: ["Legacy", "Containerize", "OpenShift", "Scale", "Resilient"],
   },
   {
@@ -46,29 +46,30 @@ export const WORK: Work[] = [
   {
     tag: "Barclays · Observability",
     title: "Real-Time Monitoring & Observability",
-    desc: "A unified view of application logs and system health built on the ELK stack and AppDynamics, so production issues surface fast and root-cause is immediate.",
+    desc: "A unified view of application logs and system health built on the ELK stack and AppDynamics. Reduced analysis and report creation time from 1–2 days to under 15 minutes, with flexible report formats and on-demand alerts for proactive monitoring.",
     pills: ["ELK", "AppDynamics", "Grafana", "Splunk"],
-    metrics: [["Live", "Dashboards"], ["APM", "Health"]],
+    metrics: [["Days → 15 min", "Report Creation"], ["On-demand", "Proactive Alerts"]],
     stages: ["Services", "Logstash", "Search", "Kibana", "Alert"],
   },
   {
     tag: "Google · Trust & Safety",
     title: "Google Devshop Automation Ecosystem",
-    desc: "Browser extensions and dashboards that automate Google Trust & Safety operations — a JS frontend with a Python backend and Cloud SQL, deployed on App Engine.",
+    desc: "Browser extensions and dashboards that automate Google Trust & Safety operations — a JS frontend with a Python backend and Cloud SQL, deployed on App Engine. Reduced overnight manual efforts to 5–10 minute automated execution for the team.",
     pills: ["JavaScript", "Python", "GCP", "App Engine", "Cloud SQL"],
-    metrics: [["Team 15", "Devshop"], ["Automated", "Operations"]],
+    metrics: [["Overnight → 5 min", "Execution Time"], ["Team 15", "Automated"]],
     stages: ["Extension", "Operator", "Backend", "App Engine", "SQL"],
   },
 ];
 
 export type Experience = { when: string; co: string; role: string; via: string };
 export const XP: Experience[] = [
-  { when: "AUG 2025 — PRESENT", co: "EXL Services UK", role: "Lead Assistant Manager", via: "Client · Barclays USA — GFED, USCB Cards" },
-  { when: "JUN 2022 — JUN 2024", co: "EXL Services", role: "Senior Software Engineer", via: "Client · Barclays USA — OpenShift & CI/CD" },
-  { when: "JUL 2021 — MAY 2022", co: "Cognizant", role: "Associate Projects", via: "Google Trust & Safety Devshop" },
-  { when: "APR 2021 — JUL 2021", co: "Alten Calasoft Labs", role: "Java Developer", via: "Client · Anglo Gulf Trade Bank — Corporate Onboarding" },
-  { when: "OCT 2020 — APR 2021", co: "Infosys", role: "Senior Systems Engineer", via: "Client · American Express — TPDG" },
-  { when: "NOV 2017 — SEP 2020", co: "Infosys", role: "Systems Engineer", via: "The Hartford — Ability Advantage" },
+  { when: "AUG 2025 — PRESENT", co: "EXL Services UK", role: "Lead Assistant Manager — Lead Software Engineer", via: "Client · Barclays USA — GFED, USCB Cards" },
+  { when: "JUL 2024 — JUL 2025", co: "EXL Services", role: "Lead Assistant Manager — Lead Software Engineer", via: "Client · Barclays USA — GitLab CI/CD & Observability" },
+  { when: "JUN 2022 — JUN 2024", co: "EXL Services", role: "Assistant Manager — Senior Software Engineer", via: "Client · Barclays USA — OpenShift & CI/CD" },
+  { when: "JUL 2021 — JUN 2022", co: "Cognizant", role: "Associate Projects", via: "Google Trust & Safety Devshop" },
+  { when: "APR 2021 — JUL 2021", co: "ACL Digital", role: "Senior Software Engineer", via: "Client · Anglo Gulf Trade Bank — Corporate Onboarding" },
+  { when: "JAN 2020 — APR 2021", co: "Infosys", role: "Senior System Engineer", via: "Client · American Express — TPHG" },
+  { when: "NOV 2017 — JAN 2020", co: "Infosys", role: "System Engineer", via: "The Hartford — Ability Advantage" },
 ];
 
 export type Testimonial = { q: string; n: string; r: string; grad: string; img: string };
@@ -117,9 +118,11 @@ export const TST: Testimonial[] = [
   },
 ];
 
-export type Award = { year: string; t: string; by: string; d: string };
+export type Award = { year: string; t: string; by: string; d: string; img?: string };
 export const AWARDS: Award[] = [
-  { year: "2020", t: "Insta Award", by: "Infosys Limited", d: "Recognised for outstanding contribution and delivery excellence on enterprise engagements." },
-  { year: "2023", t: "Emerging Talent at EXL", by: "EXL", d: "Awarded for fast impact and technical leadership as a rising engineer within the organisation." },
-  { year: "2025", t: "Analytics Oscar Award", by: "EXL · Northampton", d: "Honoured for excellence in engineering and data-driven delivery on the Barclays programme." },
+  { year: "2020", t: "Insta Award", by: "Infosys Limited", d: "Recognised for outstanding contribution and delivery excellence on enterprise engagements, reflecting consistent ownership and dependable execution across client-facing releases." },
+  { year: "2023", t: "Emerging Talent at EXL", by: "EXL", d: "Awarded for fast impact and technical leadership as a rising engineer within the organisation.", img: "/portfolio/awards/emerging-talent.png" },
+  { year: "2025", t: "Analytics Oscar Award", by: "EXL · Northampton", d: "Honoured for excellence in engineering and data-driven delivery on the Barclays programme.", img: "/portfolio/awards/analytics-oscar.png" },
+  { year: "2026", t: "Stellar Performer Award", by: "EXL · Data Management", d: "Awarded for high-impact contributions through strong ownership, disciplined execution, and a solution-oriented approach to complex challenges.", img: "/portfolio/awards/stellar-performer.png" },
 ];
+

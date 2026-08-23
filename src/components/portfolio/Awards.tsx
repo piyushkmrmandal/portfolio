@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { AWARDS } from "./data";
 import { icons } from "./icons";
@@ -39,8 +40,8 @@ export function Awards() {
           <div className="awards-grid" id="awardsGrid" ref={containerRef}>
             {AWARDS.map((a, i) => {
               const isLeft  = i === 0;
-              const isRight = i === 2;
-              const isMid   = i === 1;
+              const isRight = i === AWARDS.length - 1;
+              const isEdge  = isLeft || isRight;
 
               return (
                 /* Outer motion.div — scroll-driven fan-out transform */
@@ -49,9 +50,9 @@ export function Awards() {
                   className="award-motion-wrap"
                   style={{
                     x:       isLeft ? leftX : isRight ? rightX : undefined,
-                    scale:   !isMid ? sideScale   : undefined,
-                    opacity: !isMid ? sideOpacity : undefined,
-                    zIndex:  isMid  ? 2 : 1,
+                    scale:   isEdge ? sideScale   : undefined,
+                    opacity: isEdge ? sideOpacity : undefined,
+                    zIndex:  isEdge ? 1 : 2,
                     position: "relative",
                   }}
                 >
@@ -62,10 +63,15 @@ export function Awards() {
                     style={{ height: "100%" }}
                   >
                     <div
-                      className={`award-card reveal d${(i % 3) + 1}${
+                      className={`award-card reveal d${i + 1}${
                         i % 2 === 1 ? " alt" : ""
-                      }`}
+                      }${a.img ? " has-img" : ""}`}
                     >
+                      {a.img && (
+                        <div className="award-cert">
+                          <Image src={a.img} alt={`${a.t} certificate`} fill sizes="(max-width: 900px) 90vw, 320px" />
+                        </div>
+                      )}
                       <span className="ayear">{a.year}</span>
                       <div className="trophy">{icons.trophy}</div>
                       <h4>{a.t}</h4>
@@ -77,6 +83,7 @@ export function Awards() {
               );
             })}
           </div>
+
         </div>
       </div>
     </section>
