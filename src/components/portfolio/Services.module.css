@@ -406,13 +406,19 @@
 
   .panel {
     flex: none !important;
+    flex-direction: column;
     min-width: unset;
     width: 100%;
-    min-height: 68px;
+    min-height: 380px;
+    cursor: default;
   }
 
   .panelActive {
     min-height: 380px;
+  }
+
+  .panelStrip::after {
+    display: none;
   }
 
   .panelStrip {

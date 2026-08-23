@@ -3,6 +3,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
 import { AICapabilities } from "@/components/portfolio/AICapabilities";
+import { Certificates } from "@/components/portfolio/Certificates";
 import { Services } from "@/components/portfolio/Services";
 import { HowIWork } from "@/components/portfolio/HowIWork";
 import { Work } from "@/components/portfolio/Work";
@@ -13,7 +14,6 @@ import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { FolioRuntime } from "@/components/portfolio/FolioRuntime";
-import { SectionDots } from "@/components/portfolio/SectionDots";
 import { Intro } from "@/components/portfolio/Intro";
 
 export default function Home() {
@@ -26,6 +26,7 @@ export default function Home() {
         <About />
         <Skills />
         <AICapabilities />
+      <Certificates />
         <Services />
         <HowIWork />
         <Work />
@@ -36,7 +37,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <SectionDots />
       <FolioRuntime />
     </>
   );

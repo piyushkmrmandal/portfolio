@@ -1,16 +1,16 @@
-# Graph Report - portfolio  (2026-08-22)
+# Graph Report - portfolio  (2026-08-23)
 
 ## Corpus Check
-- 78 files · ~376,881 words
+- 85 files · ~412,176 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 641 nodes · 705 edges · 66 communities (50 shown, 16 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
+- 767 nodes · 826 edges · 64 communities (50 shown, 14 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bee1cb55`
+- Built from commit: `639491ff`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,10 +64,8 @@
 - [[_COMMUNITY_Community 46|Community 46]]
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
-- [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
-- [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
 - [[_COMMUNITY_Community 55|Community 55]]
@@ -77,22 +75,22 @@
 - [[_COMMUNITY_Community 59|Community 59]]
 - [[_COMMUNITY_Community 60|Community 60]]
 - [[_COMMUNITY_Community 61|Community 61]]
-- [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
 - [[_COMMUNITY_Community 64|Community 64]]
 - [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 67|Community 67]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 16 edges
 2. `cn()` - 15 edges
 3. `UI/UX Pro Max - Design Intelligence` - 13 edges
-4. `DesignSystemGenerator` - 11 edges
-5. `workers` - 10 edges
-6. `config` - 10 edges
-7. `Piyush Kumar Mandal — Portfolio` - 10 edges
-8. `Quick Reference` - 9 edges
-9. `manifest` - 8 edges
-10. `_search_csv()` - 8 edges
+4. `lineage` - 12 edges
+5. `lineage` - 12 edges
+6. `DesignSystemGenerator` - 11 edges
+7. `workers` - 10 edges
+8. `config` - 10 edges
+9. `Piyush Kumar Mandal — Portfolio` - 10 edges
+10. `map` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `cn()` --calls--> `clsx`  [INFERRED]
@@ -106,11 +104,11 @@
 - `ShineBorder()` --calls--> `cn()`  [EXTRACTED]
   src/components/ui/shine-border.tsx → src/lib/utils.ts
 
-## Communities (66 total, 16 thin omitted)
+## Communities (64 total, 14 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.25
-Nodes (6): SKILLS, icons, COL_OFFSETS, ease, LOGO_MAP, Skills()
+Cohesion: 0.14
+Nodes (13): memoryUsage, arrayBuffers, external, heapTotal, heapUsed, rss, mode, note (+5 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.05
@@ -122,11 +120,11 @@ Nodes (25): DesignSystemGenerator, _detect_page_type(), format_ascii_box(), form
 
 ### Community 3 - "Community 3"
 Cohesion: 0.06
-Nodes (33): ArchitectureFlow(), IconCmp, Pt, STAGE_ICON, Hero(), COMPANIES, Company, HeroMarquee() (+25 more)
+Nodes (29): Hero(), COMPANIES, Company, HeroMarquee(), TRACK, DEMO_PROJECTS, DemoProject, Project (+21 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.08
-Nodes (25): dependencies, class-variance-authority, embla-carousel-auto-scroll, embla-carousel-react, framer-motion, gsap, lenis, lucide-react (+17 more)
+Cohesion: 0.05
+Nodes (42): dependencies, class-variance-authority, embla-carousel-auto-scroll, embla-carousel-react, framer-motion, gsap, lenis, lucide-react (+34 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.09
@@ -141,8 +139,8 @@ Cohesion: 0.15
 Nodes (15): BM25, detect_domain(), _load_csv(), Lowercase, split, remove punctuation, filter short words, Build BM25 index from documents, Score all documents against query, Load CSV and return list of dicts, Core search function using BM25 (+7 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.14
-Nodes (11): AI_TOOLS, AICapabilities(), MARQUEE_ITEMS, FolioRuntime(), Footer(), ease, HowIWork(), STEPS (+3 more)
+Cohesion: 0.06
+Nodes (31): About(), ACCELERATE_ITEMS, BUILD_ITEMS, EXPERTISE_ITEMS, AI_TOOLS, AICapabilities(), MARQUEE_ITEMS, Cert (+23 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.17
@@ -213,8 +211,8 @@ Cohesion: 0.50
 Nodes (3): effortLevel, hooks, PreToolUse
 
 ### Community 27 - "Community 27"
-Cohesion: 0.40
-Nodes (4): env, ANTHROPIC_BASE_URL, permissions, allow
+Cohesion: 0.33
+Nodes (5): env, ANTHROPIC_BASE_URL, permissions, additionalDirectories, allow
 
 ### Community 41 - "Community 41"
 Cohesion: 0.33
@@ -228,25 +226,25 @@ Nodes (3): GlowCardProps, glowColorMap, sizeMap
 Cohesion: 0.08
 Nodes (28): cn(), clsx, AnimatedGridPattern(), AnimatedGridPatternProps, Square, Badge(), BadgeProps, badgeVariants (+20 more)
 
+### Community 44 - "Community 44"
+Cohesion: 0.22
+Nodes (8): projectRoot, scannedAt, structure, hasClaudeConfig, hasClaudeFlow, hasPackageJson, hasTsConfig, timestamp
+
 ### Community 45 - "Community 45"
-Cohesion: 0.19
-Nodes (11): Awards(), hoverAnim, hoverTransition, Award, AWARDS, CERTS, Experience, HONORS (+3 more)
+Cohesion: 0.06
+Nodes (31): ArchitectureFlow(), IconCmp, Pt, STAGE_ICON, Awards(), hoverAnim, hoverTransition, Award (+23 more)
 
 ### Community 46 - "Community 46"
-Cohesion: 0.11
-Nodes (17): devDependencies, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @types/node, @types/react, @types/react-dom (+9 more)
+Cohesion: 0.04
+Nodes (45): config, hash, alpha, bodyWeight, mmrLambda, subjectWeight, typePenaltyFactor, flywheel (+37 more)
 
 ### Community 47 - "Community 47"
-Cohesion: 0.29
-Nodes (6): XP, cardAnimation, ease, Experience(), JOURNEY, transition
+Cohesion: 0.13
+Nodes (14): byProvenance, causalEdges, corrupt, distillationEnabled, dryRun, duplicatesRemoved, episodes, memoryCleaned (+6 more)
 
 ### Community 48 - "Community 48"
-Cohesion: 0.33
-Nodes (4): About(), ACCELERATE_ITEMS, BUILD_ITEMS, EXPERTISE_ITEMS
-
-### Community 49 - "Community 49"
-Cohesion: 0.40
-Nodes (4): EASE, Intro(), NAME_WORDS, wordVariants
+Cohesion: 0.20
+Nodes (9): checks, envFilesProtected, gitIgnoreExists, noHardcodedSecrets, mode, note, recommendations, riskLevel (+1 more)
 
 ### Community 50 - "Community 50"
 Cohesion: 0.17
@@ -256,37 +254,33 @@ Nodes (12): config, autoStart, idleShutdownMs, logDir, maxConcurrent, resourceTh
 Cohesion: 0.17
 Nodes (11): appliedAt, championId, layer, params, alpha, bodyWeight, mmrLambda, subjectWeight (+3 more)
 
-### Community 52 - "Community 52"
-Cohesion: 0.39
-Nodes (6): BackendVisual(), du(), SaaSVisual(), SERVICES, WebAppVisual(), WebsiteVisual()
-
 ### Community 53 - "Community 53"
-Cohesion: 0.29
-Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, audit
+Cohesion: 0.22
+Nodes (9): averageDurationMs, failureCount, isRunning, lastRun, lastStartedAt, nextRun, runCount, successCount (+1 more)
 
 ### Community 54 - "Community 54"
-Cohesion: 0.29
-Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, backup
+Cohesion: 0.22
+Nodes (9): averageDurationMs, failureCount, isRunning, lastRun, lastStartedAt, nextRun, runCount, successCount (+1 more)
 
 ### Community 55 - "Community 55"
-Cohesion: 0.29
-Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, consolidate
+Cohesion: 0.22
+Nodes (9): averageDurationMs, failureCount, isRunning, lastRun, lastStartedAt, nextRun, runCount, successCount (+1 more)
 
 ### Community 56 - "Community 56"
-Cohesion: 0.29
-Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, harness
+Cohesion: 0.22
+Nodes (9): averageDurationMs, failureCount, isRunning, lastRun, lastStartedAt, nextRun, runCount, successCount (+1 more)
 
 ### Community 57 - "Community 57"
-Cohesion: 0.29
-Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, map
+Cohesion: 0.22
+Nodes (9): averageDurationMs, failureCount, isRunning, lastRun, lastStartedAt, nextRun, runCount, successCount (+1 more)
 
 ### Community 58 - "Community 58"
-Cohesion: 0.29
-Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, optimize
+Cohesion: 0.22
+Nodes (9): averageDurationMs, failureCount, isRunning, lastRun, lastStartedAt, nextRun, runCount, successCount (+1 more)
 
 ### Community 59 - "Community 59"
-Cohesion: 0.29
-Nodes (7): averageDurationMs, failureCount, isRunning, nextRun, runCount, successCount, testgaps
+Cohesion: 0.22
+Nodes (9): averageDurationMs, failureCount, isRunning, lastRun, lastStartedAt, nextRun, runCount, successCount (+1 more)
 
 ### Community 60 - "Community 60"
 Cohesion: 0.33
@@ -296,10 +290,6 @@ Nodes (6): averageDurationMs, failureCount, isRunning, runCount, successCount, d
 Cohesion: 0.33
 Nodes (6): averageDurationMs, failureCount, isRunning, runCount, successCount, predict
 
-### Community 62 - "Community 62"
-Cohesion: 0.40
-Nodes (3): Contact(), ProfileCard(), ProfileCardProps
-
 ### Community 63 - "Community 63"
 Cohesion: 0.40
 Nodes (4): running, savedAt, startedAt, workers
@@ -308,25 +298,33 @@ Nodes (4): running, savedAt, startedAt, workers
 Cohesion: 0.40
 Nodes (4): lastAdaptation, patternsLearned, signalsProcessed, trajectoriesRecorded
 
+### Community 65 - "Community 65"
+Cohesion: 0.29
+Nodes (6): estimatedCoverage, gaps, hasTestDir, mode, note, timestamp
+
+### Community 67 - "Community 67"
+Cohesion: 0.33
+Nodes (5): backedUp, rotatedAway, sizeBytes, skipped, timestamp
+
 ## Knowledge Gaps
-- **375 isolated node(s):** `setup.sh script`, `config`, `name`, `version`, `private` (+370 more)
+- **480 isolated node(s):** `setup.sh script`, `config`, `name`, `version`, `private` (+475 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `Community 43` to `Community 3`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `Community 4` to `Community 43`, `Community 46`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `Community 4` to `Community 43`?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Why does `clsx` connect `Community 43` to `Community 4`?**
-  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **What connects `setup.sh script`, `config`, `name` to the rest of the system?**
-  _401 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _506 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 0` be split into smaller, more focused modules?**
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.0855614973262032 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.056429232192414434 - nodes in this community are weakly interconnected._

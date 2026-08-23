@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Globe, Layers, Server, Rocket, ArrowUpRight } from "lucide-react";
 import styles from "./Services.module.css";
 
@@ -294,6 +294,15 @@ const SERVICES = [
 /* ─── Main Component ───────────────────────────────────────────── */
 export function Services() {
   const [active, setActive] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 900px)");
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   return (
     <section className="section" id="services" data-screen-label="Services">
@@ -311,12 +320,13 @@ export function Services() {
         <div className={`${styles.panelRow} reveal`}>
           {SERVICES.map(({ Icon, label, title, desc, price, accent, bgFrom, bgTo, Visual }, i) => {
             const isActive = active === i;
+            const expanded = isActive || isMobile;
             return (
               <div
                 key={label}
-                className={`${styles.panel} ${isActive ? styles.panelActive : ""}`}
+                className={`${styles.panel} ${expanded ? styles.panelActive : ""}`}
                 style={
-                  isActive
+                  expanded
                     ? ({
                         "--panel-accent": accent,
                         "--panel-bg-from": bgFrom,
@@ -328,7 +338,7 @@ export function Services() {
                 onClick={() => setActive(i)}
                 role="button"
                 tabIndex={0}
-                aria-expanded={isActive}
+                aria-expanded={expanded}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") setActive(i);
                 }}
@@ -383,7 +393,7 @@ export function Services() {
 
                   {/* Visual mounts fresh on activation so CSS anims restart */}
                   <div className={styles.panelVisual}>
-                    {isActive && <Visual accent={accent} />}
+                    {expanded && <Visual accent={accent} />}
                   </div>
                 </div>
               </div>

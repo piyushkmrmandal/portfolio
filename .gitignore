@@ -42,3 +42,9 @@ next-env.d.ts
 
 # graphify regenerable cache
 /graphify-out/cache/
+
+# local agent tool state
+/.claude-flow/
+/.serena/
+/.claude/proven-config.json
+/.claude/.proven-config-version

@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/.claude/settings.local.json": {
-    "mtime": 1787420939.7639427,
-    "ast_hash": "78a3199831e4f7b45c398b9b4b5e1988",
+    "mtime": 1787503533.137177,
+    "ast_hash": "3a09d4245ab3670e3a894f1fcb8c52fc",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/.claude/skills/ui-ux-pro-max/scripts/design_system.py": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/app/page.tsx": {
-    "mtime": 1782242769.3651114,
-    "ast_hash": "c37c2af0da4e50a442f53b1ff8c76179",
+    "mtime": 1787504072.383043,
+    "ast_hash": "bf127f776d158ff604e13de1bc0dc90e",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/ui/animated-grid-pattern.tsx": {
@@ -100,13 +100,13 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/data.ts": {
-    "mtime": 1787420648.4682145,
-    "ast_hash": "24b3b1577d57c3ad6c0d1057deae60c8",
+    "mtime": 1787425899.9651403,
+    "ast_hash": "ecbb01ad683f5e53bd450ca227d5b23c",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Awards.tsx": {
-    "mtime": 1787420713.5284326,
-    "ast_hash": "2dfa84535dd409266c4ba41e76aa9250",
+    "mtime": 1787425894.0272746,
+    "ast_hash": "df799603057c5b2c006efc9f58fd6353",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Work.tsx": {
@@ -130,13 +130,13 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/HeroMarquee.tsx": {
-    "mtime": 1780262784.448309,
-    "ast_hash": "d6a80b13762b8c7af584148747e51615",
+    "mtime": 1787426805.4505444,
+    "ast_hash": "469e79c61ebad5a2424167bedd89874b",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/FolioRuntime.tsx": {
-    "mtime": 1782242698.3121135,
-    "ast_hash": "ca712a8ac246d490456f33f86a08faf1",
+    "mtime": 1787424969.4821806,
+    "ast_hash": "1f2e573e785ffb8f991955502b5494aa",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/icons.tsx": {
@@ -275,8 +275,8 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/resume.pdf": {
-    "mtime": 1780262784.4286528,
-    "ast_hash": "a87667ff0372fc690218f0f29ac2ab7d",
+    "mtime": 1787439356.6296172,
+    "ast_hash": "e5ecab7ebae21887cbbdf42edca5f757",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/file.svg": {
@@ -440,8 +440,8 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Services.tsx": {
-    "mtime": 1782074726.2944677,
-    "ast_hash": "628158c341f6a5b3308108ddcf5d3a24",
+    "mtime": 1787425498.5576003,
+    "ast_hash": "1037cfa0c25fa0339bd3edff3ca5aa58",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/public/hero-screenshot.png": {
@@ -465,13 +465,13 @@
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/daemon-state.json": {
-    "mtime": 1787417803.4497652,
-    "ast_hash": "796de91cfbcc66f1cf98541e78c315ef",
+    "mtime": 1787490842.969454,
+    "ast_hash": "c4ae88d6123c8b33c2c2cd5028b0cee6",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/neural/stats.json": {
-    "mtime": 1787421766.5831568,
-    "ast_hash": "64f571f7048ba5129f6bcee8634b2295",
+    "mtime": 1787504365.0508113,
+    "ast_hash": "6b1dbbfca1479d12745c6ea350276432",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/ui/card-carousel.tsx": {
@@ -482,11 +482,6 @@
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/ui/profile-card.tsx": {
     "mtime": 1782248543.4353185,
     "ast_hash": "3ebc9c74eeb989c1ee953f69aa087945",
-    "semantic_hash": ""
-  },
-  "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/SectionDots.tsx": {
-    "mtime": 1782242736.547073,
-    "ast_hash": "fc4b20dc7a32f30deb17a2dd9a242e0d",
     "semantic_hash": ""
   },
   "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/AICapabilities.tsx": {
@@ -697,6 +692,146 @@
   "/Users/piyush/Documents/learning/claude/portfolio/public/videos/brewery.mp4": {
     "mtime": 1782076308.3398855,
     "ast_hash": "d76457aa4b0d7744c3b924101a14089e",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/awards/analytics-oscar.png": {
+    "mtime": 1787424092.0564992,
+    "ast_hash": "e3f37cfa353a707a5f6f97618742e0d8",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/awards/stellar-performer.png": {
+    "mtime": 1787424092.0610764,
+    "ast_hash": "f6a061c81f4f33cff98b637f94bc7fab",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/awards/emerging-talent.png": {
+    "mtime": 1787424092.0588713,
+    "ast_hash": "327b95ba11951b27a81e871a16ffe2e7",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/metrics/performance.json": {
+    "mtime": 1787427274.5767205,
+    "ast_hash": "ec802dfa13454979702c788910618a83",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/metrics/codebase-map.json": {
+    "mtime": 1787427703.455359,
+    "ast_hash": "48124a67d4795d8b06088bcadcf0207e",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/metrics/test-gaps.json": {
+    "mtime": 1787427275.4887705,
+    "ast_hash": "be46800ab97f468bf7d2f65e4b3683c7",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/metrics/backup.json": {
+    "mtime": 1787427145.5532315,
+    "ast_hash": "17fd8fdfd835b6a0280a54b8d11b6a03",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/metrics/security-audit.json": {
+    "mtime": 1787427275.4934487,
+    "ast_hash": "8935dbd4cfc7d6e598c400e4be753521",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/metrics/harness-loop.json": {
+    "mtime": 1787427158.8541195,
+    "ast_hash": "983f9588a67cc64bce5ce9448af59f6d",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/.claude-flow/metrics/consolidation.json": {
+    "mtime": 1787427268.3808765,
+    "ast_hash": "6c121e7ce35e5d04ed7030d1c2ca84d8",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/src/components/portfolio/Certificates.tsx": {
+    "mtime": 1787501337.3435547,
+    "ast_hash": "ec20995db8b10d7b966f49c23aa822bc",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-mcp.pdf": {
+    "mtime": 1787490988.6449802,
+    "ast_hash": "a0bbf30ba27663d7126be7f2925aeb47",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-claude-101.pdf": {
+    "mtime": 1787490988.6474223,
+    "ast_hash": "0af98959f2c4409120d64568ae737428",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-subagents.pdf": {
+    "mtime": 1787490988.6427624,
+    "ast_hash": "e8d37e549432b3996dcb48680dbf8f13",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-claude-code-in-action.pdf": {
+    "mtime": 1787490988.6495059,
+    "ast_hash": "6799e52bf790738eab21c2cc138d6887",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/anthropic-agent-skills.pdf": {
+    "mtime": 1787490988.6516223,
+    "ast_hash": "60a5f7fcae191eed3ffec84753cb3b01",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/logos/skillsoft.png": {
+    "mtime": 1787493454.5354013,
+    "ast_hash": "e06f2319dfdfda0463b0ff8905f29911",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/logos/anthropic.svg": {
+    "mtime": 1787493356.4340873,
+    "ast_hash": "ba3c0f93b9c27031b17f15bed2b9f8b5",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-mcp.png": {
+    "mtime": 1787493316.2414458,
+    "ast_hash": "756affd84f4f6e1986a40bfdb3cd6e92",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-claude-101.png": {
+    "mtime": 1787493315.8128877,
+    "ast_hash": "ed9832bd54096b26d9e1a55fd92b0c58",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-agent-skills.png": {
+    "mtime": 1787493315.6080241,
+    "ast_hash": "06faefb7e7bf23ae7e94f62d764167fe",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-claude-code-in-action.png": {
+    "mtime": 1787493316.0131233,
+    "ast_hash": "84ac557aed436ada7dc49b56d37aa6be",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/anthropic-subagents.png": {
+    "mtime": 1787493316.4480934,
+    "ast_hash": "cdc57163b135e6a34809b0887b841f7b",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-tooluse-langchain.png": {
+    "mtime": 1787494716.945756,
+    "ast_hash": "3e1fe3cd5698c22c0858ca799ed98103",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-inside-agentic-ai.png": {
+    "mtime": 1787494716.94938,
+    "ast_hash": "f8c4233493c0a6f22c49aa18425fd4b6",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-llm-deployment.png": {
+    "mtime": 1787494716.9336774,
+    "ast_hash": "fddcd133d37a4b6fdab4413d2cc81fad",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-handson-langchain.png": {
+    "mtime": 1787494716.942325,
+    "ast_hash": "b229e9eed2db5063d1204848d36a491c",
+    "semantic_hash": ""
+  },
+  "/Users/piyush/Documents/learning/claude/portfolio/public/portfolio/certificates/thumbs/skillsoft-rag-langchain.png": {
+    "mtime": 1787494716.938584,
+    "ast_hash": "741f973c4b49312b0dbe10832c571295",
     "semantic_hash": ""
   }
 }

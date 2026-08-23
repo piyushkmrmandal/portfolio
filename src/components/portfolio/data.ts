@@ -118,22 +118,11 @@ export const TST: Testimonial[] = [
   },
 ];
 
-export type Award = { year: string; t: string; by: string; d: string };
+export type Award = { year: string; t: string; by: string; d: string; img?: string };
 export const AWARDS: Award[] = [
-  { year: "2020", t: "Insta Award", by: "Infosys Limited", d: "Recognised for outstanding contribution and delivery excellence on enterprise engagements." },
-  { year: "2023", t: "Emerging Talent at EXL", by: "EXL", d: "Awarded for fast impact and technical leadership as a rising engineer within the organisation." },
-  { year: "2025", t: "Analytics Oscar Award", by: "EXL · Northampton", d: "Honoured for excellence in engineering and data-driven delivery on the Barclays programme." },
+  { year: "2020", t: "Insta Award", by: "Infosys Limited", d: "Recognised for outstanding contribution and delivery excellence on enterprise engagements, reflecting consistent ownership and dependable execution across client-facing releases." },
+  { year: "2023", t: "Emerging Talent at EXL", by: "EXL", d: "Awarded for fast impact and technical leadership as a rising engineer within the organisation.", img: "/portfolio/awards/emerging-talent.png" },
+  { year: "2025", t: "Analytics Oscar Award", by: "EXL · Northampton", d: "Honoured for excellence in engineering and data-driven delivery on the Barclays programme.", img: "/portfolio/awards/analytics-oscar.png" },
+  { year: "2026", t: "Stellar Performer Award", by: "EXL · Data Management", d: "Awarded for high-impact contributions through strong ownership, disciplined execution, and a solution-oriented approach to complex challenges.", img: "/portfolio/awards/stellar-performer.png" },
 ];
 
-export type Recognition = { t: string; by?: string };
-export const HONORS: Recognition[] = [
-  { t: "Stellar Performer Award — Data Management", by: "EXL" },
-];
-
-export const CERTS: Recognition[] = [
-  { t: "Introduction to Model Context Protocol" },
-  { t: "Agentic AI in Action: Tool Use with LangChain" },
-  { t: "Modern Java — Learn Java 8 Features By Coding It" },
-  { t: "Claude 101" },
-  { t: "Inside Agentic AI: Popular Frameworks" },
-];

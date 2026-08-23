@@ -151,10 +151,8 @@ export function FolioRuntime() {
           const scale = (1 - e * 0.13).toFixed(4); // 1.00 → 0.87 — clear depth pop
           const ty = (e * 46).toFixed(1); // rises up into place
           const op = (1 - e * 0.55).toFixed(3); // fades in
-          const blur = (e * 5.5).toFixed(2); // sharpens as it settles
           s.style.transform = `translate3d(0, ${ty}px, 0) scale(${scale})`;
           s.style.opacity = op;
-          s.style.filter = e > 0.012 ? `blur(${blur}px)` : "";
         }
         ticking = false;
       }
